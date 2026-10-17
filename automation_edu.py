@@ -1,4 +1,6 @@
-"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации)."""
+"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
+Использует Groq (OpenAI-совместимый API) для генерации текста.
+"""
 import html
 import json
 import os
@@ -9,9 +11,11 @@ from datetime import datetime, timezone
 
 import feedparser
 import requests
+from openai import OpenAI  # <-- ИЗМЕНЕНИЕ: Используем клиент OpenAI для совместимости с Groq
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
-MODEL_NAME = os.getenv("GEMINI_MODEL") or "gemini-3.8-flash"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+# <-- ИЗМЕНЕНИЕ: Указываем быструю и качественную модель от Groq
+MODEL_NAME = os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile"
 USER_AGENT = "Mozilla/5.0 (compatible; MamaUzBot/1.0)"
 
 TOPICS_FILE = "topics.json"
@@ -25,10 +29,8 @@ RSS_FEEDS = [
 
 KEYWORDS = ["child", "screen", "language", "dyslexia", "adhd", "school", "parent", "education"]
 
-
-class GeminiUnavailable(Exception):
+class LLMUnavailable(Exception):
     pass
-
 
 def load_json(path, default):
     try:
@@ -37,57 +39,51 @@ def load_json(path, default):
     except (OSError, ValueError):
         return default
 
-
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
-
 
 def clean_text(raw, limit):
     text = re.sub(r"<[^>]+>", " ", raw or "")
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
+# <-- ИЗМЕНЕНИЕ: Инициализируем клиент OpenAI, но с адресом Groq
+client = OpenAI(
+    api_key=GROQ_API_KEY,
+    base_url="https://api.groq.com/openai/v1",
+)
 
-_client = None
-
-
-def ask_gemini(prompt):
-    global _client
-    from google import genai
-    from google.genai import types
-
-    if _client is None:
-        _client = genai.Client(api_key=GEMINI_API_KEY)
-
+def ask_llm(prompt):
     waits = [20, 60]
     for attempt in range(len(waits) + 1):
         try:
-            response = _client.models.generate_content(
+            # <-- ИЗМЕНЕНИЕ: Стандартный вызов chat.completions.create
+            response = client.chat.completions.create(
                 model=MODEL_NAME,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    temperature=0.6,
-                ),
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.6,
+                # <-- ИЗМЕНЕНИЕ: Включаем JSON-режим для надежного парсинга
+                response_format={"type": "json_object"},
             )
-            return response.text or ""
+            return response.choices[0].message.content or ""
         except Exception as e:
             msg = str(e)
-            code = getattr(e, "code", None)
-            if "PerDay" in msg:
-                raise GeminiUnavailable("дневной лимит исчерпан") from e
+            code = getattr(e, "status_code", None)
+            if code == 400 and "json" in msg.lower():
+                # Специфичная ошибка Groq: нужно слово 'json' в промпте
+                raise LLMUnavailable(f"Ошибка JSON-режима Groq: {msg}") from e
             temporary = code in (429, 500, 502, 503, 504) or any(
-                s in msg for s in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE")
+                s in msg for s in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "rate limit")
             )
             if not temporary or attempt == len(waits):
-                raise GeminiUnavailable(f"ошибка Gemini ({msg[:200]})") from e
+                raise LLMUnavailable(f"Ошибка LLM ({msg[:200]})") from e
             time.sleep(waits[attempt])
-
 
 def generate_post(topic, stages):
     stages_text = "\n".join(f"- {s}" for s in stages) if stages else "этапов ещё нет"
+    # <-- ИЗМЕНЕНИЕ: Убедимся, что слово 'json' есть в промпте для Groq
     prompt = (
         "Ты — редактор Telegram-канала для родителей в Узбекистане.\n"
         "Ты не просто пишешь пост — ты РАЗВИВАЕШЬ тему.\n\n"
@@ -99,9 +95,9 @@ def generate_post(topic, stages):
         "3. Опирайся на реальные исследования и факты. Не выдумывай.\n"
         "4. Формат: «Боль (1 предложение) → Объяснение (2–3 предложения, с фактом) → Решение (1–2 предложения) → Хэштег».\n"
         "5. Язык: русский и узбекский (латиница).\n\n"
-        "Верни JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\"}"
+        "Верни ответ в формате JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\"}"
     )
-    raw = ask_gemini(prompt).strip()
+    raw = ask_llm(prompt).strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw).strip()
     data = json.loads(raw)
     for field in ("text_ru", "text_uz", "hashtag", "new_stage"):
@@ -109,8 +105,8 @@ def generate_post(topic, stages):
             raise ValueError(f"нет поля {field}")
     return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage")}
 
-
 def fetch_news():
+    # ... (эта функция остается без изменений) ...
     for feed_url in RSS_FEEDS:
         try:
             r = requests.get(feed_url, headers={"User-Agent": USER_AGENT}, timeout=30)
@@ -126,14 +122,12 @@ def fetch_news():
                     return title, link
     return None
 
-
 def pick_topic(topics):
     return min(topics, key=lambda t: len(t.get("stages", [])))
 
-
 def main():
-    if not GEMINI_API_KEY:
-        print("Не задан GEMINI_API_KEY")
+    if not GROQ_API_KEY:
+        print("Не задан GROQ_API_KEY")
         return 1
 
     topics = load_json(TOPICS_FILE, [])
@@ -150,11 +144,11 @@ def main():
 
     try:
         post = generate_post(topic["title"], topic.get("stages", []))
-    except GeminiUnavailable as e:
-        print(f"! Gemini недоступен: {e}")
+    except LLMUnavailable as e:
+        print(f"! LLM недоступен: {e}")
         return 1
     except (ValueError, json.JSONDecodeError) as e:
-        print(f"! Ошибка парсинга ответа Gemini: {e}")
+        print(f"! Ошибка парсинга ответа LLM: {e}")
         return 1
 
     news = fetch_news()
@@ -180,7 +174,6 @@ def main():
     print(f"✓ Черновик сохранён (id={draft['id']})")
     print("Готово: создано 1 черновик, ошибок 0")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
