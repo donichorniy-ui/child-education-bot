@@ -1,9 +1,4 @@
-"""Бот-модератор для канала «Мамам Узбекистана».
-
-Работает на Render. Раз в 30 секунд проверяет pending.json в GitHub.
-Если есть новый черновик — присылает админу с кнопками «Одобрить/Отклонить».
-После одобрения публикует в канал и удаляет черновик.
-"""
+"""Бот-модератор для канала «Мамам Узбекистана»."""
 import base64
 import json
 import os
@@ -16,7 +11,6 @@ from fastapi.concurrency import run_in_threadpool
 
 app = FastAPI()
 
-# --- Переменные окружения ---
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
@@ -25,32 +19,27 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/pending.json"
 
-# Множество, чтобы не отправлять один и тот же черновик дважды за сессию
+# Чтобы не отправлять один и тот же черновик дважды
 seen_ids = set()
 
 
 def tg(method, **payload):
-    """Вызов Telegram API."""
     if not BOT_TOKEN:
-        print("[tg] BOT_TOKEN не задан")
         return {"ok": False}
     try:
         r = requests.post(
             f"https://api.telegram.org/bot{BOT_TOKEN}/{method}", json=payload, timeout=15
         )
         data = r.json()
-    except (requests.RequestException, ValueError) as e:
-        print(f"[tg] {method}: {type(e).__name__}")
+    except (requests.RequestException, ValueError):
         return {"ok": False}
     if not data.get("ok"):
-        print(f"[tg] {method} не удался: {data.get('description')}")
+        print(f"[tg] {method}: {data.get('description')}")
     return data
 
 
 def fetch_pending():
-    """Читает pending.json из GitHub."""
     if not GITHUB_REPO or not GITHUB_TOKEN:
-        print("[github] GITHUB_REPO или GITHUB_TOKEN не заданы")
         return []
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     try:
@@ -58,18 +47,15 @@ def fetch_pending():
         if r.status_code == 404:
             return []
         if r.status_code != 200:
-            print(f"[github] fetch status {r.status_code}")
             return []
         data = r.json()
         content = base64.b64decode(data["content"]).decode("utf-8")
         return json.loads(content)
-    except (requests.RequestException, ValueError, KeyError) as e:
-        print(f"[github] fetch error: {type(e).__name__}")
+    except (requests.RequestException, ValueError, KeyError):
         return []
 
 
 def remove_pending(draft_id):
-    """Удаляет черновик из pending.json после публикации."""
     if not GITHUB_REPO or not GITHUB_TOKEN:
         return
     headers = {"Authorization": f"token {GITHUB_TOKEN}"}
@@ -94,8 +80,8 @@ def remove_pending(draft_id):
             },
             timeout=15,
         )
-    except (requests.RequestException, ValueError, KeyError) as e:
-        print(f"[github] remove error: {type(e).__name__}")
+    except (requests.RequestException, ValueError, KeyError):
+        pass
 
 
 def build_draft_message(draft):
@@ -113,7 +99,6 @@ def build_draft_message(draft):
 
 
 def publish_to_channel(draft):
-    """Публикует одобренный пост в канал."""
     caption = (
         f"{draft['text_ru']}\n\n"
         f"━━━━━━━━━━\n\n"
@@ -133,7 +118,6 @@ def publish_to_channel(draft):
 
 
 def checker_loop():
-    """Фоновый цикл: каждые 30 секунд проверяет новые черновики."""
     while True:
         try:
             pending = fetch_pending()
