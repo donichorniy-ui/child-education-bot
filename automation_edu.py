@@ -1,9 +1,4 @@
-"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
-
-Запускается в GitHub Actions. НЕ публикует в канал — только создаёт черновик
-в pending.json и коммитит его. Бот-модератор на Render забирает черновик
-и присылает админу на одобрение.
-"""
+"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации)."""
 import html
 import json
 import os
@@ -82,7 +77,7 @@ def ask_gemini(prompt):
             msg = str(e)
             code = getattr(e, "code", None)
             if "PerDay" in msg:
-                raise GeminiUnavailable(f"дневной лимит исчерпан") from e
+                raise GeminiUnavailable("дневной лимит исчерпан") from e
             temporary = code in (429, 500, 502, 503, 504) or any(
                 s in msg for s in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE")
             )
@@ -92,7 +87,6 @@ def ask_gemini(prompt):
 
 
 def generate_post(topic, stages):
-    """Просит Gemini написать следующий этап темы."""
     stages_text = "\n".join(f"- {s}" for s in stages) if stages else "этапов ещё нет"
     prompt = (
         "Ты — редактор Telegram-канала для родителей в Узбекистане.\n"
@@ -117,7 +111,6 @@ def generate_post(topic, stages):
 
 
 def fetch_news():
-    """Ищет новость по ключевым словам в мировых RSS. Возвращает (title, link) или None."""
     for feed_url in RSS_FEEDS:
         try:
             r = requests.get(feed_url, headers={"User-Agent": USER_AGENT}, timeout=30)
@@ -135,7 +128,6 @@ def fetch_news():
 
 
 def pick_topic(topics):
-    """Выбирает тему, у которой меньше всего этапов (чтобы все темы развивались равномерно)."""
     return min(topics, key=lambda t: len(t.get("stages", [])))
 
 
@@ -169,7 +161,7 @@ def main():
     if news:
         print(f"  Найдена новость: {news[0]}")
     else:
-        print("  Новость не найдена — пост будет без ссылки на новость")
+        print("  Новость не найдена — пост будет без ссылки")
 
     draft = {
         "id": int(time.time()),
@@ -186,7 +178,7 @@ def main():
     pending.append(draft)
     save_json(PENDING_FILE, pending[-KEEP_POSTED:])
     print(f"✓ Черновик сохранён (id={draft['id']})")
-    print(f"Готово: создано 1 черновик, ошибок 0")
+    print("Готово: создано 1 черновик, ошибок 0")
     return 0
 
 
