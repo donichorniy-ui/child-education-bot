@@ -1,1 +1,43 @@
+name: Education Post Generator
 
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements-edu.txt
+
+      - name: Generate draft
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python -u automation_edu.py
+
+      - name: Commit pending.json and topics.json
+        run: |
+          git config user.name "edu-bot"
+          git config user.email "edu-bot@users.noreply.github.com"
+          for f in pending.json topics.json; do [ -f "$f" ] && git add "$f"; done
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+            exit 0
+          fi
+          git commit -m "Update education drafts [skip ci]"
+          git pull --rebase
+          git push
