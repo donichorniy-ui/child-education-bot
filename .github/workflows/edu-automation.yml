@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate draft
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python -u automation_edu.py
 
       - name: Commit pending.json and topics.json
