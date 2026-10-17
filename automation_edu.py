@@ -1,7 +1,4 @@
-"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
-Использует Groq (OpenAI-совместимый API) для генерации текста.
-Генерирует картинку через Pollinations и сохраняет её URL в черновик.
-"""
+"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации)."""
 import html
 import json
 import os
@@ -141,7 +138,13 @@ def fetch_news():
 
 
 def pick_topic(topics):
-    return min(topics, key=lambda t: len(t.get("stages", [])))
+    """Выбирает тему, которая дольше всего не использовалась."""
+    def sort_key(t):
+        last = t.get("last_used")
+        if not last:
+            return (0, "")
+        return (1, last)
+    return min(topics, key=sort_key)
 
 
 def main():
@@ -161,6 +164,10 @@ def main():
     topic = pick_topic(topics)
     print(f"Тема: {topic['title']} (этапов: {len(topic.get('stages', []))})")
 
+    # Помечаем тему как использованную
+    topic["last_used"] = datetime.now(timezone.utc).isoformat()
+    save_json(TOPICS_FILE, topics)
+
     try:
         post = generate_post(topic["title"], topic.get("stages", []))
     except LLMUnavailable as e:
@@ -169,6 +176,11 @@ def main():
     except (ValueError, json.JSONDecodeError) as e:
         print(f"! Ошибка парсинга ответа LLM: {e}")
         return 1
+
+    # Добавляем новый этап в тему
+    if post["new_stage"] not in topic.get("stages", []):
+        topic.setdefault("stages", []).append(post["new_stage"])
+        save_json(TOPICS_FILE, topics)
 
     image_url = make_image(post["image_prompt"])
     if image_url:
