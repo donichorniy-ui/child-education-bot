@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: edu-post
+  cancel-in-progress: false
+
 jobs:
   generate:
     runs-on: ubuntu-latest
@@ -39,5 +43,5 @@ jobs:
             exit 0
           fi
           git commit -m "Update education drafts [skip ci]"
-          git pull --rebase
+          git pull --rebase --strategy-option=ours || true
           git push
