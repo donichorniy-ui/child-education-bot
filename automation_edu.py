@@ -8,13 +8,13 @@ import re
 import sys
 import time
 from datetime import datetime, timezone
+from urllib.parse import quote
 
 import feedparser
 import requests
 from openai import OpenAI
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-# Заменено на актуальную production-модель Groq
 MODEL_NAME = os.getenv("GROQ_MODEL") or "openai/gpt-oss-120b"
 USER_AGENT = "Mozilla/5.0 (compatible; MamaUzBot/1.0)"
 
@@ -89,16 +89,29 @@ def generate_post(topic, stages):
         "2. Если этапов нет — начни с этапа 1, но заложи потенциал для будущих этапов.\n"
         "3. Опирайся на реальные исследования и факты. Не выдумывай.\n"
         "4. Формат: «Боль (1 предложение) → Объяснение (2–3 предложения, с фактом) → Решение (1–2 предложения) → Хэштег».\n"
-        "5. Язык: русский и узбекский (латиница).\n\n"
-        "Верни ответ в формате JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\"}"
+        "5. Язык: русский и узбекский (латиница).\n"
+        "6. Дополнительно верни поле image_prompt на английском (макс. 15 слов) для генератора картинок. Без текста и логотипов на картинке.\n\n"
+        "Верни ответ в формате JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\", \"image_prompt\": \"...\"}"
     )
     raw = ask_llm(prompt).strip()
     raw = re.sub(r"^```(?:json)?\s*|\s*```$", "", raw).strip()
     data = json.loads(raw)
-    for field in ("text_ru", "text_uz", "hashtag", "new_stage"):
+    for field in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt"):
         if not isinstance(data.get(field), str) or not data[field].strip():
             raise ValueError(f"нет поля {field}")
-    return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage")}
+    return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt")}
+
+def make_image(prompt):
+    """Генерирует картинку через Pollinations (без токена). Возвращает URL или None."""
+    url = f"https://image.pollinations.ai/prompt/{quote(prompt)}?width=1024&height=1024&nologo=true"
+    try:
+        r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=90)
+        if r.ok and r.headers.get("content-type", "").startswith("image/"):
+            return url
+        print(f"  ! Картинка не подошла (код {r.status_code})")
+    except requests.RequestException as e:
+        print(f"  ! Ошибка загрузки картинки: {type(e).__name__}")
+    return None
 
 def fetch_news():
     for feed_url in RSS_FEEDS:
@@ -145,6 +158,12 @@ def main():
         print(f"! Ошибка парсинга ответа LLM: {e}")
         return 1
 
+    image_url = make_image(post["image_prompt"])
+    if image_url:
+        print(f"  Картинка готова: {image_url[:60]}...")
+    else:
+        print("  Картинка не сгенерирована — пост будет без неё")
+
     news = fetch_news()
     if news:
         print(f"  Найдена новость: {news[0]}")
@@ -160,6 +179,7 @@ def main():
         "text_uz": post["text_uz"],
         "hashtag": post["hashtag"],
         "new_stage": post["new_stage"],
+        "image_url": image_url,
         "news_title": news[0] if news else None,
         "news_url": news[1] if news else None,
     }
