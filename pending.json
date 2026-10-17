@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792266142,
+    "created_at": "2026-10-17T19:42:22.483642+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Вы боитесь, что фото ребёнка могут увидеть незнакомцы → По данным UNICEF 2022, 70 % родителей в Узбекистане не знают настроек приватности в соцсетях, из‑за чего их контент часто попадает в публичный доступ → Включайте строгие настройки конфиденциальности, используйте водяные знаки и делитесь только в закрытых группах → #ШерентингЗащита",
+    "text_uz": "Siz bolangizning fotosuratini tanishmaslar ko‘rishi haqida xavotirda bo‘lasiz → UNICEF 2022 ma'lumotlariga ko‘ra, O‘zbekistondagi 70 % ota-onalar ijtimoiy tarmoqlardagi maxfiylik sozlamalarini bilishmaydi, bu esa kontentning ommaga chiqishiga olib keladi → Maxfiylik sozlamalarini qat'iy yoqing, suv belgilarini qo‘shing, faqat yopiq guruhlarda bo‘lishni tanlang → #SherentingHimoya",
+    "hashtag": "#ШерентингЗащита",
+    "new_stage": "Техническая защита данных и приватность",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20adjusting%20privacy%20settings%20on%20phone%2C%20child%27s%20photo%20protected%2C%20soft%20pastel?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
