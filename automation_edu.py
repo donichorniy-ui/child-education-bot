@@ -11,11 +11,11 @@ from datetime import datetime, timezone
 
 import feedparser
 import requests
-from openai import OpenAI  # <-- ИЗМЕНЕНИЕ: Используем клиент OpenAI для совместимости с Groq
+from openai import OpenAI
 
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-# <-- ИЗМЕНЕНИЕ: Указываем быструю и качественную модель от Groq
-MODEL_NAME = os.getenv("GROQ_MODEL") or "llama-3.3-70b-versatile"
+# Заменено на актуальную production-модель Groq
+MODEL_NAME = os.getenv("GROQ_MODEL") or "openai/gpt-oss-120b"
 USER_AGENT = "Mozilla/5.0 (compatible; MamaUzBot/1.0)"
 
 TOPICS_FILE = "topics.json"
@@ -49,7 +49,6 @@ def clean_text(raw, limit):
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
-# <-- ИЗМЕНЕНИЕ: Инициализируем клиент OpenAI, но с адресом Groq
 client = OpenAI(
     api_key=GROQ_API_KEY,
     base_url="https://api.groq.com/openai/v1",
@@ -59,12 +58,10 @@ def ask_llm(prompt):
     waits = [20, 60]
     for attempt in range(len(waits) + 1):
         try:
-            # <-- ИЗМЕНЕНИЕ: Стандартный вызов chat.completions.create
             response = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=0.6,
-                # <-- ИЗМЕНЕНИЕ: Включаем JSON-режим для надежного парсинга
                 response_format={"type": "json_object"},
             )
             return response.choices[0].message.content or ""
@@ -72,7 +69,6 @@ def ask_llm(prompt):
             msg = str(e)
             code = getattr(e, "status_code", None)
             if code == 400 and "json" in msg.lower():
-                # Специфичная ошибка Groq: нужно слово 'json' в промпте
                 raise LLMUnavailable(f"Ошибка JSON-режима Groq: {msg}") from e
             temporary = code in (429, 500, 502, 503, 504) or any(
                 s in msg for s in ("429", "RESOURCE_EXHAUSTED", "503", "UNAVAILABLE", "rate limit")
@@ -83,7 +79,6 @@ def ask_llm(prompt):
 
 def generate_post(topic, stages):
     stages_text = "\n".join(f"- {s}" for s in stages) if stages else "этапов ещё нет"
-    # <-- ИЗМЕНЕНИЕ: Убедимся, что слово 'json' есть в промпте для Groq
     prompt = (
         "Ты — редактор Telegram-канала для родителей в Узбекистане.\n"
         "Ты не просто пишешь пост — ты РАЗВИВАЕШЬ тему.\n\n"
@@ -106,7 +101,6 @@ def generate_post(topic, stages):
     return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage")}
 
 def fetch_news():
-    # ... (эта функция остается без изменений) ...
     for feed_url in RSS_FEEDS:
         try:
             r = requests.get(feed_url, headers={"User-Agent": USER_AGENT}, timeout=30)
