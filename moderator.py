@@ -3,18 +3,12 @@
 Работает на Render. Раз в 30 секунд проверяет pending.json в GitHub.
 Если есть новый черновик — присылает админу с кнопками «Одобрить/Отклонить».
 После одобрения публикует в канал и удаляет черновик.
-
-Переменные окружения (Render -> Environment):
-  TELEGRAM_BOT_TOKEN   токен бота @child_edu_moderator_bot
-  TELEGRAM_CHANNEL_ID  @mamam_uz
-  ADMIN_CHAT_ID        ваш личный Telegram ID
-  GITHUB_REPO          donichorniy-ui/child-education-bot
-  GITHUB_TOKEN         personal access token с правом repo (для чтения pending.json)
 """
+import base64
 import json
 import os
-import time
 import threading
+import time
 
 import requests
 from fastapi import FastAPI, Request, Response
@@ -22,6 +16,7 @@ from fastapi.concurrency import run_in_threadpool
 
 app = FastAPI()
 
+# --- Переменные окружения ---
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
 ADMIN_CHAT_ID = os.getenv("ADMIN_CHAT_ID")
@@ -29,50 +24,66 @@ GITHUB_REPO = os.getenv("GITHUB_REPO")
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 
 GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/pending.json"
+
+# Множество, чтобы не отправлять один и тот же черновик дважды за сессию
 seen_ids = set()
 
 
 def tg(method, **payload):
+    """Вызов Telegram API."""
+    if not BOT_TOKEN:
+        print("[tg] BOT_TOKEN не задан")
+        return {"ok": False}
     try:
         r = requests.post(
             f"https://api.telegram.org/bot{BOT_TOKEN}/{method}", json=payload, timeout=15
         )
         data = r.json()
-    except (requests.RequestException, ValueError):
+    except (requests.RequestException, ValueError) as e:
+        print(f"[tg] {method}: {type(e).__name__}")
         return {"ok": False}
     if not data.get("ok"):
-        print(f"[tg] {method}: {data.get('description')}")
+        print(f"[tg] {method} не удался: {data.get('description')}")
     return data
 
 
 def fetch_pending():
     """Читает pending.json из GitHub."""
-    headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
+    if not GITHUB_REPO or not GITHUB_TOKEN:
+        print("[github] GITHUB_REPO или GITHUB_TOKEN не заданы")
+        return []
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     try:
         r = requests.get(GITHUB_API, headers=headers, timeout=15)
+        if r.status_code == 404:
+            return []
         if r.status_code != 200:
+            print(f"[github] fetch status {r.status_code}")
             return []
         data = r.json()
-        import base64
         content = base64.b64decode(data["content"]).decode("utf-8")
         return json.loads(content)
-    except (requests.RequestException, ValueError, KeyError):
+    except (requests.RequestException, ValueError, KeyError) as e:
+        print(f"[github] fetch error: {type(e).__name__}")
         return []
 
 
 def remove_pending(draft_id):
     """Удаляет черновик из pending.json после публикации."""
-    headers = {"Authorization": f"token {GITHUB_TOKEN}"} if GITHUB_TOKEN else {}
+    if not GITHUB_REPO or not GITHUB_TOKEN:
+        return
+    headers = {"Authorization": f"token {GITHUB_TOKEN}"}
     try:
         r = requests.get(GITHUB_API, headers=headers, timeout=15)
         if r.status_code != 200:
             return
         data = r.json()
-        import base64
         content = base64.b64decode(data["content"]).decode("utf-8")
         pending = json.loads(content)
         pending = [p for p in pending if p.get("id") != draft_id]
-        new_content = base64.b64encode(json.dumps(pending, ensure_ascii=False, indent=2).encode()).decode()
+        new_content = base64.b64encode(
+            json.dumps(pending, ensure_ascii=False, indent=2).encode()
+        ).decode()
         requests.put(
             GITHUB_API,
             headers=headers,
@@ -83,8 +94,8 @@ def remove_pending(draft_id):
             },
             timeout=15,
         )
-    except (requests.RequestException, ValueError, KeyError):
-        pass
+    except (requests.RequestException, ValueError, KeyError) as e:
+        print(f"[github] remove error: {type(e).__name__}")
 
 
 def build_draft_message(draft):
@@ -111,8 +122,13 @@ def publish_to_channel(draft):
     )
     if draft.get("news_url"):
         caption += f"\n\n📰 {draft['news_title']}\n{draft['news_url']}"
-    result = tg("sendMessage", chat_id=CHANNEL_ID, text=caption, parse_mode="HTML",
-                link_preview_options={"is_disabled": False})
+    result = tg(
+        "sendMessage",
+        chat_id=CHANNEL_ID,
+        text=caption,
+        parse_mode="HTML",
+        link_preview_options={"is_disabled": False},
+    )
     return result.get("ok", False)
 
 
@@ -128,13 +144,20 @@ def checker_loop():
                 seen_ids.add(draft_id)
                 msg = build_draft_message(draft)
                 keyboard = {
-                    "inline_keyboard": [[
-                        {"text": "✅ Одобрить", "callback_data": f"approve:{draft_id}"},
-                        {"text": "❌ Отклонить", "callback_data": f"reject:{draft_id}"},
-                    ]]
+                    "inline_keyboard": [
+                        [
+                            {"text": "✅ Одобрить", "callback_data": f"approve:{draft_id}"},
+                            {"text": "❌ Отклонить", "callback_data": f"reject:{draft_id}"},
+                        ]
+                    ]
                 }
-                tg("sendMessage", chat_id=ADMIN_CHAT_ID, text=msg, parse_mode="HTML",
-                   reply_markup=keyboard)
+                tg(
+                    "sendMessage",
+                    chat_id=ADMIN_CHAT_ID,
+                    text=msg,
+                    parse_mode="HTML",
+                    reply_markup=keyboard,
+                )
         except Exception as e:
             print(f"[checker] {type(e).__name__}: {e}")
         time.sleep(30)
@@ -179,21 +202,33 @@ def handle_update(update):
         pending = fetch_pending()
         draft = next((p for p in pending if p.get("id") == draft_id), None)
         if not draft:
-            tg("editMessageText", chat_id=ADMIN_CHAT_ID,
-               message_id=callback["message"]["message_id"],
-               text="⚠️ Черновик не найден (возможно, уже опубликован).")
+            tg(
+                "editMessageText",
+                chat_id=ADMIN_CHAT_ID,
+                message_id=callback["message"]["message_id"],
+                text="⚠️ Черновик не найден (возможно, уже опубликован).",
+            )
             return
         if publish_to_channel(draft):
             remove_pending(draft_id)
-            tg("editMessageText", chat_id=ADMIN_CHAT_ID,
-               message_id=callback["message"]["message_id"],
-               text=f"✅ Черновик #{draft_id} опубликован в канал.")
+            tg(
+                "editMessageText",
+                chat_id=ADMIN_CHAT_ID,
+                message_id=callback["message"]["message_id"],
+                text=f"✅ Черновик #{draft_id} опубликован в канал.",
+            )
         else:
-            tg("editMessageText", chat_id=ADMIN_CHAT_ID,
-               message_id=callback["message"]["message_id"],
-               text=f"❌ Не удалось опубликовать #{draft_id}. Проверьте права бота в канале.")
+            tg(
+                "editMessageText",
+                chat_id=ADMIN_CHAT_ID,
+                message_id=callback["message"]["message_id"],
+                text=f"❌ Не удалось опубликовать #{draft_id}. Проверьте права бота в канале.",
+            )
     elif action == "reject":
         remove_pending(draft_id)
-        tg("editMessageText", chat_id=ADMIN_CHAT_ID,
-           message_id=callback["message"]["message_id"],
-           text=f"🗑 Черновик #{draft_id} отклонён и удалён.")
+        tg(
+            "editMessageText",
+            chat_id=ADMIN_CHAT_ID,
+            message_id=callback["message"]["message_id"],
+            text=f"🗑 Черновик #{draft_id} отклонён и удалён.",
+        )
