@@ -1,5 +1,6 @@
 """Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
 Использует Groq (OpenAI-совместимый API) для генерации текста.
+Генерирует картинку через Pollinations и сохраняет её URL в черновик.
 """
 import html
 import json
@@ -29,8 +30,10 @@ RSS_FEEDS = [
 
 KEYWORDS = ["child", "screen", "language", "dyslexia", "adhd", "school", "parent", "education"]
 
+
 class LLMUnavailable(Exception):
     pass
+
 
 def load_json(path, default):
     try:
@@ -39,20 +42,24 @@ def load_json(path, default):
     except (OSError, ValueError):
         return default
 
+
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
         f.write("\n")
+
 
 def clean_text(raw, limit):
     text = re.sub(r"<[^>]+>", " ", raw or "")
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
+
 client = OpenAI(
     api_key=GROQ_API_KEY,
     base_url="https://api.groq.com/openai/v1",
 )
+
 
 def ask_llm(prompt):
     waits = [20, 60]
@@ -77,6 +84,7 @@ def ask_llm(prompt):
                 raise LLMUnavailable(f"Ошибка LLM ({msg[:200]})") from e
             time.sleep(waits[attempt])
 
+
 def generate_post(topic, stages):
     stages_text = "\n".join(f"- {s}" for s in stages) if stages else "этапов ещё нет"
     prompt = (
@@ -85,7 +93,8 @@ def generate_post(topic, stages):
         f"Тема: {topic}\n"
         f"Уже опубликованные этапы:\n{stages_text}\n\n"
         "Твоя задача:\n"
-        "1. Если этапы уже есть — придумай СЛЕДУЮЩИЙ этап, который логически продолжает предыдущие. Не повторяй то, что уже было.\n"
+        "1. Если этапы уже есть — придумай СЛЕДУЮЩИЙ этап, который логически продолжает предыдущие, но НЕ ПОВТОРЯЕТ их смысл. "
+        "Если этап 1 был про этику, этап 2 должен быть про другое (например, про техническую защиту, про возраст согласия, про то, как объяснить ребёнку).\n"
         "2. Если этапов нет — начни с этапа 1, но заложи потенциал для будущих этапов.\n"
         "3. Опирайся на реальные исследования и факты. Не выдумывай.\n"
         "4. Формат: «Боль (1 предложение) → Объяснение (2–3 предложения, с фактом) → Решение (1–2 предложения) → Хэштег».\n"
@@ -101,8 +110,8 @@ def generate_post(topic, stages):
             raise ValueError(f"нет поля {field}")
     return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt")}
 
+
 def make_image(prompt):
-    """Генерирует картинку через Pollinations (без токена). Возвращает URL или None."""
     url = f"https://image.pollinations.ai/prompt/{quote(prompt)}?width=1024&height=1024&nologo=true"
     try:
         r = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=90)
@@ -112,6 +121,7 @@ def make_image(prompt):
     except requests.RequestException as e:
         print(f"  ! Ошибка загрузки картинки: {type(e).__name__}")
     return None
+
 
 def fetch_news():
     for feed_url in RSS_FEEDS:
@@ -129,8 +139,10 @@ def fetch_news():
                     return title, link
     return None
 
+
 def pick_topic(topics):
     return min(topics, key=lambda t: len(t.get("stages", [])))
+
 
 def main():
     if not GROQ_API_KEY:
@@ -188,6 +200,7 @@ def main():
     print(f"✓ Черновик сохранён (id={draft['id']})")
     print("Готово: создано 1 черновик, ошибок 0")
     return 0
+
 
 if __name__ == "__main__":
     sys.exit(main())
