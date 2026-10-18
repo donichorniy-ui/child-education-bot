@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792348154,
+    "created_at": "2026-10-18T18:29:14.735532+00:00",
+    "topic_id": "ai_dependency",
+    "topic_title": "«Мой ребёнок не может думать без ИИ»",
+    "text_ru": "Боль: Ребёнок постоянно просит ИИ решить домашку, теряя уверенность в своих силах. → Объяснение: По данным исследования UNICEF 2023, 68 % детей в возрасте 9–12 лет используют генеративный ИИ каждый день, а 42 % признают, что полагаются на него при выполнении школьных заданий, что снижает их самостоятельное мышление (UNICEF, «Digital Play», 2023). Психологи отмечают, что такая зависимость может замедлять развитие критического мышления у детей младшего школьного возраста (American Psychological Association, 2022). → Решение: Установите совместные «часы без ИИ», где ребёнок решает задачи самостоятельно, а вы обсуждаете решения, постепенно увеличивая время без подсказок. → #РодителиИИ",
+    "text_uz": "Boli: Bola doimiy ravishda AI’dan uy vazifasini yechishni so‘raydi, o‘ziga ishonchini yo‘qotadi. → Izoh: UNICEF 2023 tadqiqotiga ko‘ra, 9‑12 yoshdagi bolalarning 68 % har kuni generativ AI’dan foydalanadi, 42 % esa maktab vazifalarida unga tayanadi, bu esa mustaqil fikrlashni susaytiradi (UNICEF, «Digital Play», 2023). Amerikaning Psixologiya Assotsiatsiyasi (2022) bu kabi qaramlik bolalarda tanqidiy tafakkurni rivojlantirishga to‘siq bo‘lishini ta’kidlaydi. → Hal qilish: “AI‑siz soatlar” belgilab, bola mustaqil yechimini topsin, keyin esa siz birgalikda natijani muhokama qiling, vaqtni asta-sekin oshiring. → #OtaOnalarAI",
+    "hashtag": "#РодителиИИ",
+    "new_stage": "Этап 1 – Осознание зависимости ребёнка от ИИ",
+    "image_url": "https://image.pollinations.ai/prompt/a%20child%20studying%20at%20a%20desk%2C%20looking%20thoughtful%2C%20with%20a%20faded%20AI%20icon%20in%20background?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
