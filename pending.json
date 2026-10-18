@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792293839,
+    "created_at": "2026-10-18T03:23:59.773205+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Боль: Вы боитесь, что фото ребёнка могут попасть в чужие руки. → Объяснение: По данным UNICEF, 70% родителей в Узбекистане публикуют детские фото без учёта рисков киберпреследования; такие изображения могут использоваться для идентификации и шантажа. → Решение: Ограничьте аудиторию, включите приватные настройки и водяные знаки, а также обсудите с ребёнком, какие фото безопасно делиться. → #БезопасныйШерентинг",
+    "text_uz": "Bоl: Siz bolangizning fotosuratlari notanishlarga tushib qolishidan xavotirlanyapsiz. → Explanation: UNICEF ma'lumotlariga ko'ra, O'zbekistondagi 70% ota-onalar bolalar fotosuratlarini xavfsizlik choralarini ko'rmasdan onlayn joylashtiradi; bu tasvirlar shaxsiy ma'lumotlar uchun foydalanilishi mumkin. → Solution: Maxsus maxfiylik sozlamalarini yoqing, rasmga suv belgisi qo'ying va bolangizga qaysi fotosuratlarni bo'lishish xavfsizligini tushuntiring. → #XavfsizShere",
+    "hashtag": "#БезопасныйШерентинг",
+    "new_stage": "Этап 1: Оценка рисков публикации детских фото",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20holding%20phone%2C%20child%20silhouette%2C%20privacy%20icons%2C%20pastel%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
