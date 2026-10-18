@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792337399,
+    "created_at": "2026-10-18T15:29:59.867617+00:00",
+    "topic_id": "cartoons_under3",
+    "topic_title": "Мультики до 3 лет: где граница вреда",
+    "text_ru": "Боль: Ребенок начинает смотреть мультфильмы слишком рано, и это мешает развитию речи. → Объяснение: Согласно исследованию Американской академии педиатрии, дети до 2 лет лучше учатся через живое общение, а экранное время более 30 минут в день связано с задержкой речи. → Решение: Ограничьте просмотр до 15 минут в день и выбирайте обучающие короткие ролики. → #МультфильмыДляМалышей",
+    "text_uz": "Bola juda kichik yoshda multfilm tomosha qilishni boshlaydi, bu til rivojlanishiga to'sqinlik qiladi. → Amerikalik Pediatriya Akademiyasining tadqiqotiga ko'ra, 2 yoshgacha bolalar jonli muloqot orqali ko'proq o'rganadilar, kuniga 30 daqiqadan ortiq ekran vaqt til kechikishiga olib keladi. → Kuniga 15 daqiqagacha cheklang va qisqa, o‘quv multfilmlarni tanlang. → #MultfilmBolaUchun",
+    "hashtag": "#MultfilmBolaUchun",
+    "new_stage": "Этап 1: Ограничение экранного времени и выбор качественного контента",
+    "image_url": "https://image.pollinations.ai/prompt/caring%20parent%20gently%20turning%20off%20TV%20for%20toddler%2C%20bright%20pastel%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
