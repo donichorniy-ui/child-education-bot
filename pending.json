@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792537075,
+    "created_at": "2026-10-20T22:57:55.227841+00:00",
+    "topic_id": "homework",
+    "topic_title": "Домашка без слёз: как помочь, не делая за ребёнка",
+    "text_ru": "Боль: Дети часто плачут и сопротивляются домашке, потому что чувствуют давление. → Объяснение: По данным Американской психологической ассоциации, избыточный контроль снижает внутреннюю мотивацию и повышает тревожность у детей. Исследования показывают, что поддержка автономии повышает успеваемость. → Решение: Установите фиксированное время и место для занятий, предложите помощь в виде вопросов, а не ответов. → #ДомашкаБезСлез",
+    "text_uz": "Boli: Bolalar uy vazifasiga qarshi yig'lashadi, chunki bosim his qiladilar. → Izoh: APA ma'lumotlariga ko'ra, ortiqcha nazorat ichki motivatsiyani pasaytiradi va xavotirni oshiradi. Tadqiqotlar avtonomiya qo'llab-quvvatlash o'quv natijalarini yaxshilashini ko'rsatadi. → Hal: Uyda belgilangan vaqt va joy yaratib, savollar bilan yordam berish, javoblarni berishdan saqlaning. → #UyVazifasiSizga",
+    "hashtag": "#ДомашкаБезСлез",
+    "new_stage": "Этап 1: Создай поддерживающую среду для выполнения домашки",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20calmly%20assisting%20child%20with%20homework%20at%20kitchen%20table%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
