@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792487574,
+    "created_at": "2026-10-20T09:12:54.770189+00:00",
+    "topic_id": "praise",
+    "topic_title": "Как хвалить ребёнка, чтобы он не боялся ошибок",
+    "text_ru": "Боль: Ребёнок боится ошибаться, потому что получает критику вместо поддержки. → Объяснение: Исследования Даниэля Канемана показывают, что негативная обратная связь усиливает страх неудачи, а позитивная — повышает готовность к экспериментам. Психологи из Калифорнийского университета обнаружили, что дети, получающие процессную похвалу, лучше справляются с новыми задачами. → Решение: Хвалите усилия и стратегии, а не результат, подчёркивая, что ошибки — часть обучения. → #ПозитивноеВоспитание",
+    "text_uz": "Boli: Bola xatolik qilishdan qo‘rqadi, chunki uni tanqid qilish o‘rniga qo‘llab-quvvatlamaydi. → Izoh: Daniel Kahneman tadqiqotlari salbiy fikr bildirish qo‘rquvni kuchaytiradi, ijobiy fikr esa tajribaga ochiqlikni oshiradi. Kaliforniya universiteti psixologlari esa jarayonni maqtash bolalarning yangi vazifalarga muvaffaqiyatli yondashishini ko‘rsatdi. → Yechim: Natijani emas, harakat va strategiyani maqtang, xatoliklar o‘rganishning bir qismi ekanligini ta'kidlang. → #IjobiyTarbiya",
+    "hashtag": "#ПозитивноеВоспитание",
+    "new_stage": "Этап 1: Похвала усилий и стратегии, а не результата",
+    "image_url": "https://image.pollinations.ai/prompt/warm%20scene%20of%20parent%20praising%20child%20while%20child%20draws%2C%20bright%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Cut screen time in classrooms to avoid long-term health issues, clinicians urge",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq4g18prn4l4o?at_medium=RSS&at_campaign=rss"
+  }
+]
