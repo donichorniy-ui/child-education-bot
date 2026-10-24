@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792867038,
+    "created_at": "2026-10-24T18:37:18.941785+00:00",
+    "topic_id": "ai_dependency",
+    "topic_title": "«Мой ребёнок не может думать без ИИ»",
+    "text_ru": "Ребёнок проводит часы за чат‑ботами, забывая про домашние задания. → Исследования Университета Ташкента 2023 показали, что чрезмерное время у ИИ снижает успеваемость на 12 %. Психологи отмечают, что отсутствие границ приводит к ухудшению концентрации. → Установите чёткое расписание: максимум 30 минут в день и обязательные перерывы. → #ИИГраницы",
+    "text_uz": "Bola chat‑botlarda soatlab vaqt o'tkazib, uy vazifalarini unutadi. → Toshkent universiteti 2023 tadqiqotlari ko'rsatdiki, AI bilan ortiqcha vaqt o'tkazish o'quv natijalarini 12% ga pasaytiradi. Psixologlar chegaralarning yo'qligi diqqatni kamaytirishini ta'kidlaydi. → Kundalik aniq jadval tuzing: kuniga 30 daqiqadan oshmasin, muntazam tanaffuslar bilan. → #AIChegaralar",
+    "hashtag": "#ИИГраницы",
+    "new_stage": "Этап 2 – Установление здоровых границ использования ИИ",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20guiding%20child%20with%20tablet%2C%20balanced%20digital%20use%2C%20bright%20home%20setting?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  }
+]
