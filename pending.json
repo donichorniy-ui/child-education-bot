@@ -11,5 +11,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Mother%20using%20phone%20with%20calm%20background%2C%20no%20logos%2C%20soft%20colors?width=1024&height=1024&nologo=true",
     "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
     "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1792812947,
+    "created_at": "2026-10-24T03:35:47.950539+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Боль: Родители боятся, что фото ребёнка могут попасть в чужие руки. → По исследованию Pew Research Center 2022, 71 % родителей считают утечку личных данных детей главным риском соцсетей; метаданные и геотеги позволяют определить местоположение. → Перед публикацией удаляйте метаданные, используйте приватные аккаунты и ограничьте круг зрителей. → #БезопасныйШерентинг",
+    "text_uz": "Boli: Ota-onalar bolalar fotosuratlari noqonuniy qo‘llanilishi haqida xavotirda. → Pew Research 2022 tadqiqotiga ko‘ra, ota-onalarning 71 % bolalar ma’lumotlarining tarqalishini asosiy xavf deb hisoblaydi; EXIF ma’lumotlari joylashuvni ochishi mumkin. → Fotosuratni yuklashdan oldin metama’lumotlarni o‘chirib, maxfiy hisob va auditoriyani cheklang. → #XavfsizSharing",
+    "hashtag": "#БезопасныйШерентинг",
+    "new_stage": "Этап 2: Техническая защита и управление доступом к фото",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20editing%20child%27s%20photo%20privacy%20settings%20on%20smartphone%2C%20minimalistic%20style?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
   }
 ]
