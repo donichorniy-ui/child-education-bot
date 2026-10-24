@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1792880202,
+    "created_at": "2026-10-24T22:16:42.670741+00:00",
+    "topic_id": "school_prison",
+    "topic_title": "«Школа — тюрьма»: почему пропадает желание учиться",
+    "text_ru": "Боль: Ученики ощущают школу как тюрьму, и желание учиться исчезает. → Объяснение: По данным ПЭИ (2021), постоянный стресс и отсутствие автономии снижают выработку дофамина, отвечающего за мотивацию. → Решение: Внедрите совместные проекты, где ребёнок выбирает тему и формирует план, что повышает чувство контроля. #ШколаТюрьма",
+    "text_uz": "Boli: O‘quvchilar maktabni qamoq deb his qilishadi, o‘rganish istagi yo‘qoladi. → Izoh: 2021‑yilgi PЭИ tadqiqotiga ko‘ra, doimiy stress va mustaqillikning yo‘qligi dopamin ishlab chiqarishni pasaytiradi, bu motivatsiyani kamaytiradi. → Yechim: Bolaga mavzuni tanlash va reja tuzish imkonini beruvchi birgalikdagi loyihalarni joriy qiling, bu nazorat hissini oshiradi. #ШколаТюрьма",
+    "hashtag": "#ШколаТюрьма",
+    "new_stage": "Этап 2: Практические методы восстановления мотивации через автономию и проектное обучение",
+    "image_url": "https://image.pollinations.ai/prompt/Teenage%20student%20looking%20hopeful%2C%20school%20hallway%2C%20bright%20colors%2C%20supportive%20parent?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  }
+]
