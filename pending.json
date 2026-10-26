@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1793038959,
+    "created_at": "2026-10-26T18:22:39.683764+00:00",
+    "topic_id": "homework",
+    "topic_title": "Домашка без слёз: как помочь, не делая за ребёнка",
+    "text_ru": "Боль: Ребёнку трудно сосредоточиться без чёткого расписания. → Объяснение: Исследования Американской психологической ассоциации показывают, что фиксированный график повышает продуктивность детей на 23 %, а предсказуемое время начала и окончания домашки снижает уровень тревожности. → Решение: Составьте совместный план – фиксируйте время, длительность и перерывы, визуально разместите его на стене. → #ДомашкаБезСлез",
+    "text_uz": "Bole: Bolaga aniq jadval bo'lmaganda, diqqatini jamlash qiyin. → Izoh: Amerika Psixologiya Assotsiatsiyasining tadqiqotiga ko'ra, belgilangan vaqt jadvali bolalarning unumdorligini 23% ga oshiradi, va belgilangan boshlanish‑tugash vaqti xavotirni kamaytiradi. → Yechim: Birgalikda kunlik reja tuzing – vaqt, davomiylik va tanaffuslarni belgilab, devorga qo'ying. → #ДомашкаБезСлез",
+    "hashtag": "#ДомашкаБезСлез",
+    "new_stage": "Этап 2: Установи чёткое расписание и правила выполнения домашки",
+    "image_url": "https://image.pollinations.ai/prompt/a%20calm%20home%20study%20corner%20with%20child%20and%20parent%2C%20soft%20lighting%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  }
+]
