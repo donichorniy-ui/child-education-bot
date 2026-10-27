@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1793073632,
+    "created_at": "2026-10-27T04:00:32.625351+00:00",
+    "topic_id": "food",
+    "topic_title": "Ребёнок мало ест: когда это проблема, а когда нет",
+    "text_ru": "Боль: Родитель переживает, что ребёнок отказывается от еды и теряет вес → Объяснение: Снижение аппетита часто безвредно, но если сопровождается потерей более 5 % массы тела за месяц, постоянной вялостью или рвотой, это может указывать на медицинскую проблему (по данным WHO, такие симптомы требуют оценки врача). Кроме того, хроническая недоедание в раннем возрасте влияет на рост и развитие мозга → Решение: При появлении этих признаков необходимо записаться к педиатру для обследования и возможных анализов → #здоровье_малыша",
+    "text_uz": "Боль: Ota-ona farzandining ovqatni rad etishi va vazn yo‘qotishidan tashvishlanadi → Объяснение: Ovqat iste’moli pasayishi ko‘pincha xavfsiz, lekin agar bir oy ichida 5 % dan ortiq vazn yo‘qotish, doimiy charchoq yoki qusish bilan birga bo‘lsa, bu tibbiy muammo belgisi (WHO ma’lumotlariga ko‘ra, bunday belgilar shifokor ko‘rikini talab qiladi). Shuningdek, erta yoshda surunkali oziq‑ovqat yetishmasligi bo‘shashish va miyani rivojlanishiga ta’sir qiladi → Решение: Bunday belgilar paydo bo‘lganda, pediatrga murojaat qilib, tekshiruv va analizlar o‘tkazish kerak → #bolajon_sogligi",
+    "hashtag": "#здоровье_малыша",
+    "new_stage": "Этап 2: Признаки, требующие обращения к врачу",
+    "image_url": "https://image.pollinations.ai/prompt/concerned%20parent%20with%20child%20at%20pediatric%20clinic%2C%20soft%20warm%20lighting?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  }
+]
