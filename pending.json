@@ -11,5 +11,18 @@
     "image_url": null,
     "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
     "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1793132909,
+    "created_at": "2026-10-27T20:28:29.348255+00:00",
+    "topic_id": "sleep",
+    "topic_title": "Как уложить ребёнка спать без скандала",
+    "text_ru": "Боль: Ребёнок сопротивляется, требуя ещё игр перед сном. → Объяснение: Исследования показывают, что яркий свет экранов подавляет мелатонин, задерживая сон; к тому же переутомление от активных игр повышает уровень адреналина. → Решение: За час до сна отключите все гаджеты, предложите тихие занятия, например, рисование в мягком свете. → #спокойныйсон",
+    "text_uz": "Boli: Bola uxlamoqchi bo‘lganda yana o‘yin o‘ynashni talab qiladi. → Izoh: Tadqiqotlar shuni ko‘rsatadiki, ekranlarning yorug‘ligi melatonin ishlab chiqarilishini kamaytiradi, bu uyquni kechiktiradi; shuningdek, faol o‘yinlar adrenalinni oshiradi. → Yechim: Uyqudan bir soat oldin barcha qurilmalarni o‘chirib, yumshoq yoritishda tinch mashg‘ulotlar, masalan, rasm chizishni taklif qiling. → #xotirjamuyqu",
+    "hashtag": "#спокойныйсон",
+    "new_stage": "Этап 2: Отключить электронные устройства за час до сна и заменить их спокойными занятиями.",
+    "image_url": "https://image.pollinations.ai/prompt/Cozy%20bedroom%2C%20dim%20lamp%2C%20parent%20reading%20bedtime%20story%20to%20child?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
   }
 ]
