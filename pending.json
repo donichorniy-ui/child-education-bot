@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1793671320,
+    "created_at": "2026-11-03T02:02:00.350451+00:00",
+    "topic_id": "praise",
+    "topic_title": "Как хвалить ребёнка, чтобы он не боялся ошибок",
+    "text_ru": "Боль: Ребёнок боится пробовать новое, опасаясь оценки только по результату. → Объяснение: Исследования К. Двек показывают, что общая похвала усиливает страх неудачи, тогда как конкретная обратная связь о выполненных действиях помогает ребёнку видеть связь между усилием и успехом; эксперименты в педагогической психологии подтверждают, что дети, получающие точные комментарии о своих стратегиях, более уверенно решают задачи. → Решение: Подчёркивайте конкретные шаги, которые ребёнок сделал правильно, например: «Ты отлично разбил задачу на части», – это укрепит его уверенность в собственных способностях. → #РодительскийГайд",
+    "text_uz": "Bolan: Bola yangi narsani sinashdan qo'rqadi, natijaga qarab baholanadi deb. → Izoh: K. Dwekin tadqiqotlari shuni ko'rsatadiki, umumiy maqtov qo'rquvni kuchaytiradi, lekin aniq harakatlarga yo'naltirilgan fikr bola o'z harakatlari va muvaffaqiyat o'rtasidagi bog'liqlikni ko'rishga yordam beradi; pedagogik psixologiya eksperimentlari aniq strategiya bo'yicha izoh olgan bolalar muammolarni mustaqil hal qilishga ko'proq tayyor ekanligini tasdiqlaydi. → Yechim: Bolaning aniq bajargan qadamlarini ta'kidlang, masalan: \"Siz vazifani ajoyib tarzda bo'ldingiz\", bu uning o'z qobiliyatiga ishonchini mustahkamlaydi. → #OtaOnalarGaydi",
+    "hashtag": "#РодительскийГайд",
+    "new_stage": "Этап 3: Конкретная похвала действий и стратегий, а не общих качеств",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20praising%20child%20with%20specific%20feedback%2C%20warm%20home%20interior?width=1024&height=1024&nologo=true",
+    "news_title": "Holocaust school lessons to be improved after 'shocking' antisemitism review",
+    "news_url": "https://www.bbc.co.uk/news/articles/cq39870ypgl7o?at_medium=RSS&at_campaign=rss"
+  }
+]
