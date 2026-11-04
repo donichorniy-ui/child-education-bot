@@ -1,4 +1,6 @@
-"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации)."""
+"""Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
+Обновлено: новый узбекский алфавит (2026) + источники Китай/РФ/Казахстан/Узбекистан.
+"""
 import html
 import json
 import os
@@ -21,27 +23,50 @@ TOPICS_FILE = "topics.json"
 PENDING_FILE = "pending.json"
 KEEP_POSTED = 200
 
-# Источники: Узбекистан, Россия, международные
+# ─── RSS: Узбекистан, Россия, Казахстан, Китай + международные ───────────────
 RSS_FEEDS = [
     # Узбекистан
     "https://www.gazeta.uz/ru/rss/",
     "https://uza.uz/ru/rss/",
     "https://podrobno.uz/rss/",
+    "https://www.spot.uz/ru/rss/",
     # Россия
-    "https://aif.ru/rss/social.php",
     "https://ria.ru/export/rss2/archive/index.xml",
+    "https://aif.ru/rss/social.php",
+    # Казахстан
+    "https://www.gov.kz/api/v1/public/rss/edu/news/ru",
+    "https://ru.aulieatanews.kz/tag/doshkolnoe-obrazovanie/feed/",
+    # Китай (RSS-агрегаторы, доступные без браузера)
+    "https://rss.sina.com.cn/news/china/focus15.xml",
+    "https://rss.sohu.com/rss/learning.xml",
     # Международные (образовательная тематика)
     "https://feeds.bbci.co.uk/news/education/rss.xml",
     "https://rss.nytimes.com/services/xml/rss/nyt/Education.xml",
 ]
 
-# Ключевые слова: английские + русские (латиница и кириллица)
+# Веса: локальные источники важнее международных
+RSS_WEIGHTS = [3, 3, 3, 3, 2, 2, 2, 2, 2, 2, 1, 1]
+
+# ─── Ключевые слова: RU / EN / UZ ───────────────────────────────────────────
 KEYWORDS = [
     # English
     "child", "screen", "language", "dyslexia", "adhd", "school", "parent", "education",
+    "toddler", "kid", "baby", "learning",
     # Русские
-    "ребёнок", "ребенок", "дети", "школ", "образован", "воспитан", "родител",
-    "гаджет", "экран", "речь", "дислекси", "сдвг", "подрост", "семь", "малыш",
+    "ребёнок", "ребенок", "дети", "детск", "школ", "образован", "воспитан",
+    "родител", "мама", "семь", "семьи", "гаджет", "экран", "речь", "дислекси",
+    "сдвг", "подрост", "малыш", "садик", "детсад", "игр", "сон", "питани",
+    # Узбекские (латиница)
+    "bola", "bolalar", "maktab", "tarbiya", "ota-ona", "farzand", "chaqaloq",
+    "bog'cha", "o'yin", "nutq", "ekran", "ta'lim",
+]
+
+# ─── Старые → новые буквы узбекского алфавита (2026) ────────────────────────
+UZ_REPLACEMENTS = [
+    ("o‘", "ö"), ("o'", "ö"), ("O‘", "Ö"), ("O'", "Ö"),
+    ("g‘", "ğ"), ("g'", "ğ"), ("G‘", "Ğ"), ("G'", "Ğ"),
+    ("sh", "ş"), ("Sh", "Ş"), ("SH", "Ş"),
+    ("ch", "ç"), ("Ch", "Ç"), ("CH", "Ç"),
 ]
 
 
@@ -67,6 +92,15 @@ def clean_text(raw, limit):
     text = re.sub(r"<[^>]+>", " ", raw or "")
     text = html.unescape(text)
     return re.sub(r"\s+", " ", text).strip()[:limit]
+
+
+def fix_uzbek(text):
+    """Принудительно применяет новый узбекский алфавит (2026)."""
+    if not text:
+        return text
+    for old, new in UZ_REPLACEMENTS:
+        text = text.replace(old, new)
+    return text
 
 
 client = OpenAI(
@@ -107,13 +141,22 @@ def generate_post(topic, stages):
         f"Тема: {topic}\n"
         f"Уже опубликованные этапы:\n{stages_text}\n\n"
         "Твоя задача:\n"
-        "1. Если этапы уже есть — придумай СЛЕДУЮЩИЙ этап, который логически продолжает предыдущие, но НЕ ПОВТОРЯЕТ их смысл. "
-        "Если этап 1 был про этику, этап 2 должен быть про другое (например, про техническую защиту, про возраст согласия, про то, как объяснить ребёнку).\n"
+        "1. Если этапы уже есть — придумай СЛЕДУЮЩИЙ этап, который логически продолжает предыдущие, но НЕ ПОВТОРЯЕТ их смысл.\n"
         "2. Если этапов нет — начни с этапа 1, но заложи потенциал для будущих этапов.\n"
         "3. Опирайся на реальные исследования и факты. Не выдумывай.\n"
         "4. Формат: «Боль (1 предложение) → Объяснение (2–3 предложения, с фактом) → Решение (1–2 предложения) → Хэштег».\n"
         "5. Язык: русский и узбекский (латиница).\n"
         "6. Дополнительно верни поле image_prompt на английском (макс. 15 слов) для генератора картинок. Без текста и логотипов на картинке.\n\n"
+        "⚠️ КРИТИЧЕСКИ ВАЖНО ДЛЯ УЗБЕКСКОГО ТЕКСТА (новый алфавит с 21.10.2026):\n"
+        "Используй ТОЛЬКО следующие буквы для специфических звуков:\n"
+        "  - Вместо o‘ / o' пиши Ö ö\n"
+        "  - Вместо g‘ / g' пиши Ğ ğ\n"
+        "  - Вместо sh / Sh пиши Ş ş\n"
+        "  - Вместо ch / Ch пиши Ç ç\n"
+        "  - Буквосочетание ng НЕ является отдельной буквой — пиши две буквы n и g.\n"
+        "  - Апостроф ‘ сохраняется только как tutuq belgisi.\n"
+        "ЗАПРЕЩЕНО использовать старые формы o‘, g‘, sh, ch в узбекском тексте.\n"
+        "Проверь каждое слово перед выводом.\n\n"
         "Верни ответ в формате JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\", \"image_prompt\": \"...\"}"
     )
     raw = ask_llm(prompt).strip()
@@ -122,7 +165,11 @@ def generate_post(topic, stages):
     for field in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt"):
         if not isinstance(data.get(field), str) or not data[field].strip():
             raise ValueError(f"нет поля {field}")
-    return {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt")}
+    result = {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt")}
+    # Пост-обработка узбекского текста: принудительно применяем новый алфавит
+    result["text_uz"] = fix_uzbek(result["text_uz"])
+    result["hashtag"] = fix_uzbek(result["hashtag"])
+    return result
 
 
 def make_image(prompt):
@@ -138,28 +185,45 @@ def make_image(prompt):
 
 
 def fetch_news():
-    """Собирает все совпадения по ключевым словам и возвращает случайную новость.
-    Один битый фид не ломает весь цикл.
+    """Собирает совпадения по ключевым словам из title + summary.
+    Взвешенный выбор фидов: локальные источники приоритетнее.
+    Один битый фид не ломает цикл.
     """
     candidates = []
-    feeds = RSS_FEEDS[:]
-    random.shuffle(feeds)  # чтобы не всегда побеждал первый источник
 
-    for feed_url in feeds:
+    # Взвешенная случайная выборка фидов (с дублями — это нормально для random.choices)
+    try:
+        chosen_feeds = random.choices(RSS_FEEDS, weights=RSS_WEIGHTS, k=len(RSS_FEEDS))
+    except Exception:
+        chosen_feeds = RSS_FEEDS[:]
+        random.shuffle(chosen_feeds)
+
+    seen_urls = set()
+    for feed_url in chosen_feeds:
+        if feed_url in seen_urls:
+            continue
+        seen_urls.add(feed_url)
+
         try:
             r = requests.get(feed_url, headers={"User-Agent": USER_AGENT}, timeout=30)
             r.raise_for_status()
             parsed = feedparser.parse(r.content)
-            entries = parsed.entries[:15]
+            entries = parsed.entries[:20]
         except Exception as e:
-            print(f"  ! Фид пропущен ({feed_url[:40]}): {type(e).__name__}")
+            print(f"  ! Фид пропущен ({feed_url[:50]}): {type(e).__name__}")
+            continue
+
+        if not entries:
+            print(f"  ! Фид пуст ({feed_url[:50]})")
             continue
 
         for entry in entries:
-            title = clean_text(entry.get("title"), 200)
+            title = clean_text(entry.get("title"), 300)
+            summary = clean_text(entry.get("summary") or entry.get("description"), 500)
+            haystack = (title + " " + summary).lower()
             if not title:
                 continue
-            if any(k in title.lower() for k in KEYWORDS):
+            if any(k in haystack for k in KEYWORDS):
                 link = entry.get("link")
                 if link:
                     candidates.append((title, link))
@@ -196,7 +260,6 @@ def main():
     topic = pick_topic(topics)
     print(f"Тема: {topic['title']} (этапов: {len(topic.get('stages', []))})")
 
-    # Помечаем тему как использованную
     topic["last_used"] = datetime.now(timezone.utc).isoformat()
     save_json(TOPICS_FILE, topics)
 
@@ -209,7 +272,6 @@ def main():
         print(f"! Ошибка парсинга ответа LLM: {e}")
         return 1
 
-    # Добавляем новый этап в тему
     if post["new_stage"] not in topic.get("stages", []):
         topic.setdefault("stages", []).append(post["new_stage"])
         save_json(TOPICS_FILE, topics)
@@ -222,7 +284,7 @@ def main():
 
     news = fetch_news()
     if news:
-        print(f"  Найдена новость: {news[0]} ({news[1][:50]}...)")
+        print(f"  Найдена новость: {news[0]} ({news[1][:60]}...)")
     else:
         print("  Новость не найдена — пост будет без ссылки")
 
