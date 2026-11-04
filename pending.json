@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1793769180,
+    "created_at": "2026-11-04T05:13:00.914499+00:00",
+    "topic_id": "food",
+    "topic_title": "Ребёнок мало ест: когда это проблема, а когда нет",
+    "text_ru": "Боль: Ребёнок отказывается от еды, и родители переживают, что он не получит нужных питательных веществ. Объяснение: По данным ВОЗ, у детей 2‑5 лет естественно бывают периоды снижения аппетита, однако длительное отвращение к еде может привести к дефициту железа и витамина D. Решение: Вводите разнообразные продукты небольшими порциями, делайте приём пищи игрой и избегайте давления, при необходимости консультируйтесь с диетологом. #детскоепитание",
+    "text_uz": "Boli: Bola ovqatdan bosh tortadi, ota‑onalar esa u yetarli oziq moddalarni olmaydi, deb xavotirda. Izoh: WHO ma'lumotlariga ko'ra, 2‑5 yoshdagi bolalarda ishtaha pasayishi tabiiy, ammo uzoq muddatli rad etish temir va D vitamini yetishmasligiga olib kelishi mumkin. Yeчим: Kichik porsiyalar, rangli taomlar, ovqatni o'yin shaklida taklif qiling, bosim qo'ymaslik, zarur bo'lsa dietolog bilan maslahatlashish. #bolaningovqatlanishi",
+    "hashtag": "#детскоепитание",
+    "new_stage": "Этап 3: Практические стратегии поддержки аппетита и формирования здоровых пищевых привычек",
+    "image_url": "https://image.pollinations.ai/prompt/happy%20child%20eating%20colorful%20fruits%20and%20vegetables%20at%20a%20family%20table?width=1024&height=1024&nologo=true",
+    "news_title": "The Sexual Abuse Crisis in Paris’s Public Schools",
+    "news_url": "https://www.nytimes.com/2026/10/16/world/europe/paris-schools-abuse-crisis.html"
+  }
+]
