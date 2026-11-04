@@ -20,6 +20,22 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 GITHUB_API = f"https://api.github.com/repos/{GITHUB_REPO}/contents/pending.json"
 seen_ids = set()
 
+# Старые → новые буквы узбекского алфавита (2026)
+UZ_REPLACEMENTS = [
+    ("o‘", "ö"), ("o'", "ö"), ("O‘", "Ö"), ("O'", "Ö"),
+    ("g‘", "ğ"), ("g'", "ğ"), ("G‘", "Ğ"), ("G'", "Ğ"),
+    ("sh", "ş"), ("Sh", "Ş"), ("SH", "Ş"),
+    ("ch", "ç"), ("Ch", "Ç"), ("CH", "Ç"),
+]
+
+
+def fix_uzbek(text):
+    if not text:
+        return text
+    for old, new in UZ_REPLACEMENTS:
+        text = text.replace(old, new)
+    return text
+
 
 def tg(method, **payload):
     if not BOT_TOKEN:
@@ -83,13 +99,14 @@ def remove_pending(draft_id):
 
 
 def build_draft_message(draft):
+    text_uz_fixed = fix_uzbek(draft.get("text_uz", ""))
     text = (
         f"📝 <b>Черновик #{draft['id']}</b>\n"
         f"Тема: <i>{draft['topic_title']}</i>\n"
         f"Новый этап: <i>{draft['new_stage']}</i>\n\n"
         f"🇷🇺 <b>Русский:</b>\n{draft['text_ru']}\n\n"
-        f"🇺🇿 <b>Узбекский:</b>\n{draft['text_uz']}\n\n"
-        f"Хэштег: {draft['hashtag']}\n"
+        f"🇺🇿 <b>Узбекский:</b>\n{text_uz_fixed}\n\n"
+        f"Хэштег: {fix_uzbek(draft.get('hashtag', ''))}\n"
     )
     if draft.get("news_url"):
         text += f"📰 Новость: {draft['news_title']}\n{draft['news_url']}\n"
@@ -99,11 +116,13 @@ def build_draft_message(draft):
 
 
 def publish_to_channel(draft):
+    text_uz_fixed = fix_uzbek(draft.get("text_uz", ""))
+    hashtag_fixed = fix_uzbek(draft.get("hashtag", ""))
     caption = (
         f"{draft['text_ru']}\n\n"
         f"━━━━━━━━━━\n\n"
-        f"{draft['text_uz']}\n\n"
-        f"{draft['hashtag']}"
+        f"{text_uz_fixed}\n\n"
+        f"{hashtag_fixed}"
     )
     if draft.get("news_url"):
         caption += f"\n\n📰 {draft['news_title']}\n{draft['news_url']}"
@@ -132,8 +151,6 @@ def publish_to_channel(draft):
 
 
 def checker_loop():
-    # При старте помечаем все уже имеющиеся черновики как «виденные»,
-    # чтобы не дублировать их после рестарта.
     for draft in fetch_pending():
         draft_id = draft.get("id")
         if draft_id is not None:
@@ -199,7 +216,7 @@ def handle_update(update):
     if ":" not in data:
         return
     action, draft_id_str = data.split(":", 1)
-    draft_id = draft_id_str  # оставляем строкой
+    draft_id = draft_id_str
 
     tg("answerCallbackQuery", callback_query_id=callback["id"])
 
