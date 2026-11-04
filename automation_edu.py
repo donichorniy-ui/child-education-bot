@@ -2,6 +2,7 @@
 import html
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -20,12 +21,28 @@ TOPICS_FILE = "topics.json"
 PENDING_FILE = "pending.json"
 KEEP_POSTED = 200
 
+# Источники: Узбекистан, Россия, международные
 RSS_FEEDS = [
+    # Узбекистан
+    "https://www.gazeta.uz/ru/rss/",
+    "https://uza.uz/ru/rss/",
+    "https://podrobno.uz/rss/",
+    # Россия
+    "https://aif.ru/rss/social.php",
+    "https://ria.ru/export/rss2/archive/index.xml",
+    # Международные (образовательная тематика)
     "https://feeds.bbci.co.uk/news/education/rss.xml",
     "https://rss.nytimes.com/services/xml/rss/nyt/Education.xml",
 ]
 
-KEYWORDS = ["child", "screen", "language", "dyslexia", "adhd", "school", "parent", "education"]
+# Ключевые слова: английские + русские (латиница и кириллица)
+KEYWORDS = [
+    # English
+    "child", "screen", "language", "dyslexia", "adhd", "school", "parent", "education",
+    # Русские
+    "ребёнок", "ребенок", "дети", "школ", "образован", "воспитан", "родител",
+    "гаджет", "экран", "речь", "дислекси", "сдвг", "подрост", "семь", "малыш",
+]
 
 
 class LLMUnavailable(Exception):
@@ -121,20 +138,35 @@ def make_image(prompt):
 
 
 def fetch_news():
-    for feed_url in RSS_FEEDS:
+    """Собирает все совпадения по ключевым словам и возвращает случайную новость.
+    Один битый фид не ломает весь цикл.
+    """
+    candidates = []
+    feeds = RSS_FEEDS[:]
+    random.shuffle(feeds)  # чтобы не всегда побеждал первый источник
+
+    for feed_url in feeds:
         try:
             r = requests.get(feed_url, headers={"User-Agent": USER_AGENT}, timeout=30)
             r.raise_for_status()
-            entries = feedparser.parse(r.content).entries
-        except requests.RequestException:
+            parsed = feedparser.parse(r.content)
+            entries = parsed.entries[:15]
+        except Exception as e:
+            print(f"  ! Фид пропущен ({feed_url[:40]}): {type(e).__name__}")
             continue
-        for entry in entries[:10]:
+
+        for entry in entries:
             title = clean_text(entry.get("title"), 200)
+            if not title:
+                continue
             if any(k in title.lower() for k in KEYWORDS):
                 link = entry.get("link")
                 if link:
-                    return title, link
-    return None
+                    candidates.append((title, link))
+
+    if not candidates:
+        return None
+    return random.choice(candidates)
 
 
 def pick_topic(topics):
@@ -190,7 +222,7 @@ def main():
 
     news = fetch_news()
     if news:
-        print(f"  Найдена новость: {news[0]}")
+        print(f"  Найдена новость: {news[0]} ({news[1][:50]}...)")
     else:
         print("  Новость не найдена — пост будет без ссылки")
 
