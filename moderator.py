@@ -64,7 +64,7 @@ def remove_pending(draft_id):
         data = r.json()
         content = base64.b64decode(data["content"]).decode("utf-8")
         pending = json.loads(content)
-        pending = [p for p in pending if p.get("id") != draft_id]
+        pending = [p for p in pending if str(p.get("id")) != str(draft_id)]
         new_content = base64.b64encode(
             json.dumps(pending, ensure_ascii=False, indent=2).encode()
         ).decode()
@@ -132,12 +132,22 @@ def publish_to_channel(draft):
 
 
 def checker_loop():
+    # При старте помечаем все уже имеющиеся черновики как «виденные»,
+    # чтобы не дублировать их после рестарта.
+    for draft in fetch_pending():
+        draft_id = draft.get("id")
+        if draft_id is not None:
+            seen_ids.add(str(draft_id))
+
     while True:
         try:
             pending = fetch_pending()
             for draft in pending:
                 draft_id = draft.get("id")
-                if not draft_id or draft_id in seen_ids:
+                if draft_id is None:
+                    continue
+                draft_id = str(draft_id)
+                if draft_id in seen_ids:
                     continue
                 seen_ids.add(draft_id)
                 msg = build_draft_message(draft)
@@ -189,16 +199,13 @@ def handle_update(update):
     if ":" not in data:
         return
     action, draft_id_str = data.split(":", 1)
-    try:
-        draft_id = int(draft_id_str)
-    except ValueError:
-        return
+    draft_id = draft_id_str  # оставляем строкой
 
     tg("answerCallbackQuery", callback_query_id=callback["id"])
 
     if action == "approve":
         pending = fetch_pending()
-        draft = next((p for p in pending if p.get("id") == draft_id), None)
+        draft = next((p for p in pending if str(p.get("id")) == draft_id), None)
         if not draft:
             tg(
                 "editMessageText",
