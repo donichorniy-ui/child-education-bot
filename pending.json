@@ -1,1 +1,15 @@
-[]
+[
+  {
+    "id": 1793793290,
+    "created_at": "2026-11-04T11:54:50.505726+00:00",
+    "topic_id": "sleep",
+    "topic_title": "Как уложить ребёнка спать без скандала",
+    "text_ru": "Боль: Ребёнок просыпается из‑за слишком яркого света и шума. → Объяснение: Исследования Национального фонда сна показывают, что темнота и тишина способствуют выработке мелатонина, а свет и громкие звуки подавляют её, вызывая частые пробуждения. → Решение: Установите в детской затемняющие шторы и используйте белый шум или мягкую музыку на минимальном уровне. → #СпокойныйСон",
+    "text_uz": "Bola yÖrüĞlik va Şovqin tufayli uĞonadi. → Tadqiqotlar Milliy Uyqu Fondi kÖrsatadiki, qÖrÖnĞu va jim muhit melatonin işlab çiqarişni oşiradi, yÖrüĞlik va baland Şovqin uni kamaytiradi, bu kÖp marta uĞotadi. → Yotoqxonaga qÖrÖnĞu pardalar Örnatib, yumşoq Şovqin yoki sekin musiqa çalib, yÖrüĞlikni kamaytiring. → #TinçUyqu",
+    "hashtag": "#TinçUyqu",
+    "new_stage": "Этап 3: Создать темную и тихую атмосферу в комнате",
+    "image_url": "https://image.pollinations.ai/prompt/Cozy%20child%27s%20bedroom%20at%20night%20with%20dim%20lights%20and%20white%20noise%20speaker?width=1024&height=1024&nologo=true",
+    "news_title": "Министр просвещения встретила в Астане школьников, вошедших в пятерку лучших на международных соревнованиях по дрон-спорту в США",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1318047?lang=ru"
+  }
+]
