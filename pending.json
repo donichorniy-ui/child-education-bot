@@ -76,5 +76,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Parent%20and%20child%20discussing%20household%20rules%2C%20smiling%2C%20bright%20living%20room?width=1024&height=1024&nologo=true",
     "news_title": "Children spending too long on maths app TT Rockstars, MP warns",
     "news_url": "https://www.bbc.co.uk/news/articles/c64g1vyxq4j5o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1793991540,
+    "created_at": "2026-11-06T18:59:00.386374+00:00",
+    "topic_id": "mom_guilt",
+    "topic_title": "Чувство вины у молодой мамы",
+    "text_ru": "Muammo: Ощущение, что вы должны справляться со всем в одиночку, усиливает чувство вины. → Tushuntirish: Исследования показывают, что наличие поддерживающей сети (партнер, семья, группы мам) снижает уровень стресса на 30% и уменьшает самокритику (Harvard Health, 2022). → Yechim: Сформируйте сеть поддержки, делегируйте задачи и учитесь говорить «нет», чтобы сохранить энергию для себя и ребёнка. → #MamaPodderzhka",
+    "text_uz": "Muammo: O'zini hamma vazifalarni yolg'iz bajarishi kerak degan his, ayblov tuyg'usini kuchaytiradi. → Tushuntirish: Tadqiqotlarga ko'ra, qo'llab-quvvatlovchi tarmoq (turmush o'rtog'i, oila, ona guruhlari) stress darajasini 30% ga kamaytiradi va o'zini tanqid qilishni pasaytiradi (Harvard Health, 2022). → Yechim: Qo'llab-quvvatlash tarmog'ini yarating, vazifalarni bo'lishing, 'yo'q' deya olishni o'rganing, shunda o'zingiz va bolaga energiya qoladi. → #MamaPodderzhka",
+    "hashtag": "#MamaPodderzhka",
+    "new_stage": "Этап 4 – Установление границ и делегирование обязанностей",
+    "image_url": "https://image.pollinations.ai/prompt/young%20mother%20sharing%20baby%20care%20with%20supportive%20family%2C%20warm%20home%20environment?width=1024&height=1024&nologo=true",
+    "news_title": "В Алматы пройдет IV международная конференция «Шахматы в образовании»",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1322480?lang=ru"
   }
 ]
