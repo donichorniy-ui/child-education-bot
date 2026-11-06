@@ -1,5 +1,5 @@
 """Генератор постов для канала «Мамам Узбекистана» (черновики для модерации).
-Обновлено: новый узбекский алфавит (2026) + источники Китай/РФ/Казахстан/Узбекистан.
+Обновлено: исправлена ошибка Groq JSON, убраны турецкие символы из узбекского, правильный перевод.
 """
 import html
 import json
@@ -61,14 +61,6 @@ KEYWORDS = [
     "bog'cha", "o'yin", "nutq", "ekran", "ta'lim",
 ]
 
-# ─── Старые → новые буквы узбекского алфавита (2026) ────────────────────────
-UZ_REPLACEMENTS = [
-    ("o‘", "ö"), ("o'", "ö"), ("O‘", "Ö"), ("O'", "Ö"),
-    ("g‘", "ğ"), ("g'", "ğ"), ("G‘", "Ğ"), ("G'", "Ğ"),
-    ("sh", "ş"), ("Sh", "Ş"), ("SH", "Ş"),
-    ("ch", "ç"), ("Ch", "Ç"), ("CH", "Ç"),
-]
-
 
 class LLMUnavailable(Exception):
     pass
@@ -94,15 +86,6 @@ def clean_text(raw, limit):
     return re.sub(r"\s+", " ", text).strip()[:limit]
 
 
-def fix_uzbek(text):
-    """Принудительно применяет новый узбекский алфавит (2026)."""
-    if not text:
-        return text
-    for old, new in UZ_REPLACEMENTS:
-        text = text.replace(old, new)
-    return text
-
-
 client = OpenAI(
     api_key=GROQ_API_KEY,
     base_url="https://api.groq.com/openai/v1",
@@ -113,9 +96,13 @@ def ask_llm(prompt):
     waits = [20, 60]
     for attempt in range(len(waits) + 1):
         try:
+            # ⚠️ ИСПРАВЛЕНО: добавлено слово JSON в системный промпт
             response = client.chat.completions.create(
                 model=MODEL_NAME,
-                messages=[{"role": "user", "content": prompt}],
+                messages=[
+                    {"role": "system", "content": "Ты — редактор. Отвечай строго в формате JSON. Не пиши ничего, кроме JSON."},
+                    {"role": "user", "content": prompt}
+                ],
                 temperature=0.6,
                 response_format={"type": "json_object"},
             )
@@ -144,18 +131,16 @@ def generate_post(topic, stages):
         "1. Если этапы уже есть — придумай СЛЕДУЮЩИЙ этап, который логически продолжает предыдущие, но НЕ ПОВТОРЯЕТ их смысл.\n"
         "2. Если этапов нет — начни с этапа 1, но заложи потенциал для будущих этапов.\n"
         "3. Опирайся на реальные исследования и факты. Не выдумывай.\n"
-        "4. Формат: «Боль (1 предложение) → Объяснение (2–3 предложения, с фактом) → Решение (1–2 предложения) → Хэштег».\n"
+        "4. Формат: «Muammo (1 предложение) → Tushuntirish (2–3 предложения, с фактом) → Yechim (1–2 предложения) → Хэштег».\n"
         "5. Язык: русский и узбекский (латиница).\n"
         "6. Дополнительно верни поле image_prompt на английском (макс. 15 слов) для генератора картинок. Без текста и логотипов на картинке.\n\n"
-        "⚠️ КРИТИЧЕСКИ ВАЖНО ДЛЯ УЗБЕКСКОГО ТЕКСТА (новый алфавит с 21.10.2026):\n"
-        "Используй ТОЛЬКО следующие буквы для специфических звуков:\n"
-        "  - Вместо o‘ / o' пиши Ö ö\n"
-        "  - Вместо g‘ / g' пиши Ğ ğ\n"
-        "  - Вместо sh / Sh пиши Ş ş\n"
-        "  - Вместо ch / Ch пиши Ç ç\n"
-        "  - Буквосочетание ng НЕ является отдельной буквой — пиши две буквы n и g.\n"
-        "  - Апостроф ‘ сохраняется только как tutuq belgisi.\n"
-        "ЗАПРЕЩЕНО использовать старые формы o‘, g‘, sh, ch в узбекском тексте.\n"
+        "⚠️ КРИТИЧЕСКИ ВАЖНО ДЛЯ УЗБЕКСКОГО ТЕКСТА:\n"
+        "Используй современный узбекский алфавит на латинице.\n"
+        "  - Вместо слова 'Боль' используй 'Muammo'.\n"
+        "  - Буквосочетания sh и ch пишутся двумя буквами (sh, ch), а не символами ş, ç.\n"
+        "  - Буква o' пишется как o' (с апострофом), НЕ как ö.\n"
+        "  - Буква g' пишется как g' (с апострофом), НЕ как ğ.\n"
+        "  - НЕ используй турецкие символы: ö, ğ, ş, ç, ı.\n"
         "Проверь каждое слово перед выводом.\n\n"
         "Верни ответ в формате JSON: {\"text_ru\": \"...\", \"text_uz\": \"...\", \"hashtag\": \"...\", \"new_stage\": \"...\", \"image_prompt\": \"...\"}"
     )
@@ -166,9 +151,6 @@ def generate_post(topic, stages):
         if not isinstance(data.get(field), str) or not data[field].strip():
             raise ValueError(f"нет поля {field}")
     result = {k: data[k].strip() for k in ("text_ru", "text_uz", "hashtag", "new_stage", "image_prompt")}
-    # Пост-обработка узбекского текста: принудительно применяем новый алфавит
-    result["text_uz"] = fix_uzbek(result["text_uz"])
-    result["hashtag"] = fix_uzbek(result["hashtag"])
     return result
 
 
@@ -191,7 +173,6 @@ def fetch_news():
     """
     candidates = []
 
-    # Взвешенная случайная выборка фидов (с дублями — это нормально для random.choices)
     try:
         chosen_feeds = random.choices(RSS_FEEDS, weights=RSS_WEIGHTS, k=len(RSS_FEEDS))
     except Exception:
