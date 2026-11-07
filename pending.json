@@ -141,5 +141,18 @@
     "image_url": "https://image.pollinations.ai/prompt/parent%20and%20toddler%20discussing%20cartoon%20on%20couch%2C%20bright%20colors%2C%20warm%20lighting?width=1024&height=1024&nologo=true",
     "news_title": "Школьники ознакомились с таможенной службой",
     "news_url": "https://uza.uz/ru/posts/shkolniki-oznakomilis-s-tamozhennoy-sluzhboy_934104"
+  },
+  {
+    "id": 1794094233,
+    "created_at": "2026-11-07T23:30:33.710271+00:00",
+    "topic_id": "ai_dependency",
+    "topic_title": "«Мой ребёнок не может думать без ИИ»",
+    "text_ru": "Muammo: Ребёнок полностью полагается на ИИ при решении задач, теряя возможность творческого самовыражения. → Tushuntirish: Исследования OECD 2022 показывают, что проектное обучение повышает навыки решения проблем и снижает зависимость от технологий. Дети, участвующие в самостоятельных творческих проектах, демонстрируют более высокий уровень внутренней мотивации и критического мышления. → Yechim: Внедрите регулярные творческие задания без использования ИИ, поощряя детей разрабатывать собственные проекты и делиться результатами. → #AIfreeCreativity",
+    "text_uz": "Muammo: Bola muammolarni hal qilishda AIga to‘liq tayanadi, ijodiy o‘zini ifoda etish imkoniyatini yo‘qotadi. → Tushuntirish: OECD 2022 yilgi tadqiqotlari shuni ko‘rsatadiki, loyiha asosidagi ta’lim muammolarni hal qilish ko‘nikmalarini oshiradi va texnologiyalarga bo‘lgan bog‘liqlikni kamaytiradi. Mustaqil ijodiy loyihalarda ishtirok etuvchi bolalar ichki motivatsiya va tanqidiy fikrlashni yuqori darajada namoyon etadilar. → Yechim: AIsiz ijodiy topshiriqlarni muntazam qo‘shing, bolalarga o‘z loyihalarini yaratish va natijalarini baham ko‘rish imkoniyatini bering. → #AIfreeCreativity",
+    "hashtag": "#AIfreeCreativity",
+    "new_stage": "Этап 4 – Поддержка самостоятельного творчества и проектной деятельности",
+    "image_url": "https://image.pollinations.ai/prompt/child%20creating%20art%20without%20digital%20devices%2C%20bright%20colors%2C%20supportive%20environment%2C%20educational?width=1024&height=1024&nologo=true",
+    "news_title": "В Навоийской области детсад перевозил десятки детей в Damas. Водителя и заведующую учреждения уже привлекали к ответственности",
+    "news_url": "https://podrobno.uz/cat/proisshestviya/v-navoiyskoy-oblasti-detsad-perevozil-desyatki-detey-v-damas-voditelya-i-zaveduyushchuyu-uchrezhdeni/"
   }
 ]
