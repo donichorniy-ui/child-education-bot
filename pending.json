@@ -102,5 +102,18 @@
     "image_url": "https://image.pollinations.ai/prompt/mothers%20sharing%20experiences%20in%20a%20cozy%20offline%20support%20group%2C%20warm%20lighting?width=1024&height=1024&nologo=true",
     "news_title": "Новые правила GSP+: что изменится для Узбекистана в торговле с Евросоюзом",
     "news_url": "https://www.gazeta.uz/ru/2026/11/06/gsp/"
+  },
+  {
+    "id": 1794030332,
+    "created_at": "2026-11-07T05:45:32.826244+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Muammo: Родители часто не знают, как обнаружить несанкционированное использование фото ребёнка. → Tushuntirish: Исследования UNICEF 2022 показали, что более 60 % родителей в странах СНГ не проверяют, кто сохраняет их фотографии. Неавторизованный доступ может привести к киберпреследованию и коммерческой эксплуатации изображений. → Yechim: Регулярно проверяйте настройки доступа, используйте сервисы мониторинга изображений и сразу реагируйте на нарушения. → #БезопасныеФото",
+    "text_uz": "Muammo: Ota-onalar bolalar fotosuratlarining ruxsatsiz ishlatilishini aniqlashni bilmasliklari. → Tushuntirish: UNICEF 2022 yildagi tadqiqotiga ko'ra, MDH mamlakatlarida 60% dan ortiq ota-onalar fotosuratlarining kimga ko'rsatilishini tekshirmaydi. Ruxsatsiz foydalanish kiber-tazyiq va tijorat maqsadlarida tasvirlarni ishlatishga olib kelishi mumkin. → Yechim: Kirish sozlamalarini doimiy tekshirib turing, tasvir monitoring xizmatlaridan foydalaning va buzilish holatida darhol choralar ko'ring. → #XavfsizFoto",
+    "hashtag": "#БезопасныеФото",
+    "new_stage": "Этап 4: Мониторинг и реагирование на несанкционированное использование фотографий",
+    "image_url": "https://image.pollinations.ai/prompt/a%20parent%20reviewing%20child%20photo%20privacy%20settings%20on%20a%20smartphone%2C%20modern%20style?width=1024&height=1024&nologo=true",
+    "news_title": "WhatsApp introduces optional parental controls for teenagers",
+    "news_url": "https://www.bbc.co.uk/news/articles/cm986x65we88o?at_medium=RSS&at_campaign=rss"
   }
 ]
