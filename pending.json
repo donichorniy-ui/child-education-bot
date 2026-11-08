@@ -167,5 +167,18 @@
     "image_url": "https://image.pollinations.ai/prompt/a%20diverse%20classroom%20practicing%20mindfulness%20bright%20colors%20children%20focused%20teacher%20guiding?width=1024&height=1024&nologo=true",
     "news_title": "В Алматы пройдет IV международная конференция «Шахматы в образовании»",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1322480?lang=ru"
+  },
+  {
+    "id": 1794149345,
+    "created_at": "2026-11-08T14:49:05.995365+00:00",
+    "topic_id": "dyslexia",
+    "topic_title": "Дислексия и дисграфия: как распознать",
+    "text_ru": "Muammo: Ребенок избегает чтения и пишет с множеством ошибок, что снижает успеваемость. → Tushuntirish: Исследования показывают, что регулярные домашние упражнения и использование аудиокниг повышают навыки чтения у детей с дислексией на 30% (Journal of Learning Disabilities, 2022). Кроме того, специальные программы, такие как Orton‑Gillingham, доказали свою эффективность в улучшении письма. → Yechim: Внедрите дома адаптивные технологии – аудио‑подкасты, программы чтения с подсветкой и планируйте короткие ежедневные занятия. → #DyslexiaSupport",
+    "text_uz": "Muammo: Bola o'qishga qochib, ko'p imlo xatolari bilan yozadi, bu o'qish natijalarini pasaytiradi. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, uyda muntazam mashqlar va audio kitoblardan foydalanish disleksiya bolalarida o'qish ko'nikmalarini 30% ga oshiradi (Journal of Learning Disabilities, 2022). Shuningdek, Orton‑Gillingham kabi maxsus dasturlar yozishni yaxshilashda samarali. → Yechim: Uyda adaptiv texnologiyalar – audio podkastlar, yoritilgan matn o'qish dasturlari va qisqa kunlik mashg'ulotlarni joriy qiling. → #DyslexiaSupport",
+    "hashtag": "#DyslexiaSupport",
+    "new_stage": "Этап 4: Поддержка дома и использование адаптивных технологий",
+    "image_url": "https://image.pollinations.ai/prompt/child%20reading%20with%20audio%20device%2C%20supportive%20home%20environment%2C%20bright%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Устроивший бойню в Кракове 25-летний поляк перед нападением застрелил своих родителей и сестру",
+    "news_url": "https://podrobno.uz/cat/world/ustroivshiy-boynyu-v-krakove-25-letniy-polyak-pered-napadeniem-zastrelil-svoikh-roditeley-i-sestru/"
   }
 ]
