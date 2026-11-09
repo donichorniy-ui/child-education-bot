@@ -193,5 +193,18 @@
     "image_url": "https://image.pollinations.ai/prompt/supportive%20teacher%20meeting%20with%20parents%2C%20colorful%20charts%2C%20calm%20classroom?width=1024&height=1024&nologo=true",
     "news_title": "Около 1 000 школьников участвуют в областном этапе республиканской олимпиады по лингвистике",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1324738?lang=ru"
+  },
+  {
+    "id": 1794200312,
+    "created_at": "2026-11-09T04:58:32.880987+00:00",
+    "topic_id": "school_anxiety",
+    "topic_title": "Ребёнок часто болеет перед школой",
+    "text_ru": "Muammo: Ребёнок часто болеет перед школой, и родители не знают, как вовремя заметить тревожные симптомы. → Tushuntirish: Исследования показывают, что регулярный мониторинг температуры и самочувствия позволяет выявлять инфекции на ранних стадиях, снижая пропуски занятий. По данным Всемирной организации здравоохранения, раннее выявление простудных заболеваний уменьшает риск осложнений у детей. → Yechim: Ведите дневник здоровья, фиксируя температуру и симптомы, и сразу сообщайте учителю о любых отклонениях. → #ЗдоровьеВШколе",
+    "text_uz": "Muammo: Bola maktab oldidan tez-tez kasal bo'ladi, ota-onalar xavotirli belgilarni qanday aniqlashni bilmaydi. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, har kuni tana harorati va holatni kuzatish infektsiyalarni erta bosqichda aniqlashga yordam beradi, darslardan qoldirishni kamaytiradi. Jahon sog'liqni saqlash tashkiloti ma'lumotiga ko'ra, erta aniqlash bolalarda asoratlarga olib kelish xavfini pasaytiradi. → Yechim: Sog'liq kundaligini yuriting, harorat va simptomlarni yozib boring, va har qanday o'zgarish haqida o'qituvchiga darhol xabar bering. → #MaktabSogligi",
+    "hashtag": "#ЗдоровьеВШколе",
+    "new_stage": "Этап 4: Сотрудничество с школой и раннее выявление проблем",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20and%20teacher%20reviewing%20child%27s%20health%20chart%20in%20school%20hallway%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "Former permanent secretary alleges he was 'bullied' by education minister, says MLA",
+    "news_url": "https://www.bbc.co.uk/news/articles/c35yn7p4970go?at_medium=RSS&at_campaign=rss"
   }
 ]
