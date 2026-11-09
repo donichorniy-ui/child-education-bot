@@ -206,5 +206,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Parent%20and%20teacher%20reviewing%20child%27s%20health%20chart%20in%20school%20hallway%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
     "news_title": "Former permanent secretary alleges he was 'bullied' by education minister, says MLA",
     "news_url": "https://www.bbc.co.uk/news/articles/c35yn7p4970go?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1794248738,
+    "created_at": "2026-11-09T18:25:38.686346+00:00",
+    "topic_id": "child_fears",
+    "topic_title": "Детские страхи: когда это норма, а когда проблема",
+    "text_ru": "Muammo: После того как страхи уменьшились, ребёнку может не хватать уверенности в новых ситуациях. → Tushuntirish: По данным исследований, постепенное расширение зоны комфорта и положительное подкрепление повышают самооценку и снижают риск рецидива тревожных реакций (Bandura, 1997; American Academy of Pediatrics, 2020). → Yechim: Предлагайте ребёнку небольшие задачи с поддержкой, отмечайте успехи и поощряйте самостоятельность. → #DetiBezStraha",
+    "text_uz": "Muammo: Qo'rqinchli hislar pasaygandan keyin bola yangi vaziyatlarda ishonchsizlikni his qilishi mumkin. → Tushuntirish: Tadqiqotlarga ko'ra, bosqichma-bosqich qulay zona kengayishi va ijobiy rag'batlantirish o'ziga ishonchni oshiradi, qayta qo'rquvlarning takrorlanish xavfini kamaytiradi (Bandura, 1997; AAP, 2020). → Yechim: Bolaga kichik topshiriqlarni qo'llab-quvvatlab bering, yutuqlarini nishonlang, mustaqillikni rag'batlantiring. → #BolalarXavotsiz",
+    "hashtag": "#DetiBezStraha",
+    "new_stage": "Этап 4 – Поддержка и развитие уверенности после преодоления страхов",
+    "image_url": "https://image.pollinations.ai/prompt/smiling%20child%20playing%20confidently%20in%20sunny%20park%20with%20supportive%20parents%2C%20bright%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Более 33 тысяч детей, родителей и педагогов получили помощь в центрах психологической поддержки",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1321100?lang=ru"
   }
 ]
