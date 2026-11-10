@@ -219,5 +219,18 @@
     "image_url": "https://image.pollinations.ai/prompt/smiling%20child%20playing%20confidently%20in%20sunny%20park%20with%20supportive%20parents%2C%20bright%20colors?width=1024&height=1024&nologo=true",
     "news_title": "Более 33 тысяч детей, родителей и педагогов получили помощь в центрах психологической поддержки",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1321100?lang=ru"
+  },
+  {
+    "id": 1794278101,
+    "created_at": "2026-11-10T02:35:01.357497+00:00",
+    "topic_id": "tantrums",
+    "topic_title": "Истерики у детей 4–6 лет: как реагировать без крика",
+    "text_ru": "Muammo: Дети часто устраивают истерики, когда не умеют самостоятельно решать конфликты. → Tushuntirish: Исследования Американской психологической ассоциации показывают, что обучение детей навыкам «я‑сообщения» снижает частоту эмоциональных всплесков на 30 %. Этот метод помогает ребёнку чётко формулировать свои чувства и потребности. → Yechim: Вводите простые правила «я‑сообщения» в игру и позволяйте ребёнку предлагать решения конфликта.",
+    "text_uz": "Muammo: Bolalar konfliktni o'zlari hal qila olmaganda ishoralar qiladi. → Tushuntirish: Amerika Psixologiya Assotsiatsiyasining tadqiqotlari shuni ko'rsatadiki, «men‑gapiraman» usulini o'rgatish bolalarning hissiy portlashlarini 30 % ga kamaytiradi. Bu usul bolalarga o'z his-tuyg'ularini aniq ifodalashni o'rgatadi. → Yechim: O'yin orqali oddiy «men‑gapiraman» qoidalarini joriy qiling va bolaga yechim taklif qilishga imkon bering.",
+    "hashtag": "#IshonchliMuloqot",
+    "new_stage": "Этап 4 — Поддержка самостоятельного решения конфликтов и развитие коммуникационных навыков",
+    "image_url": "https://image.pollinations.ai/prompt/calm%20parent%20guiding%20preschool%20child%20through%20conflict%20resolution%20game%2C%20bright%20colors%2C%20illustration?width=1024&height=1024&nologo=true",
+    "news_title": "ПВО сбила восемь беспилотников над Севастополем",
+    "news_url": "https://ria.ru/20261110/bpla-2130452420.html"
   }
 ]
