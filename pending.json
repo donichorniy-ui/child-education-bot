@@ -245,5 +245,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Parent%20praising%20child%20planning%20and%20adjusting%20a%20puzzle%2C%20warm%20light%2C%20educational%20setting?width=1024&height=1024&nologo=true",
     "news_title": "Parents warned to be on alert after school data breach",
     "news_url": "https://www.bbc.co.uk/news/articles/cm9dzz6191gvo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1794346870,
+    "created_at": "2026-11-10T21:41:10.935813+00:00",
+    "topic_id": "morning_routine",
+    "topic_title": "Утро без слёз: как собраться в школу за 20 минут",
+    "text_ru": "Muammo: Утром часто теряется время из‑за поиска нужных вещей → Tushuntirish: Исследования психологии показывают, что наличие заранее подготовленного «пакета выхода» сокращает время сборов на 30% → Yechim: Установите в коридоре небольшую полку‑органайзер с ячейками, где каждый предмет имеет своё место → #УтреннийРитм",
+    "text_uz": "Muammo: Ertalab ko'p vaqt kerakli narsalarni topishda yo'qoladi → Tushuntirish: Psixologiya tadqiqotlari shuni ko'rsatadiki, oldindan tayyorlangan \"chiqish paket\" vaqtni 30% qisqartiradi → Yechim: Koridorda har bir maktab buyumiga o'z joyi bo'lgan kichik polka-organizator o'rnatish → #ErtaKunduz",
+    "hashtag": "#УтреннийРитм",
+    "new_stage": "Этап 4: Организация «выходного пакета» в коридоре",
+    "image_url": "https://image.pollinations.ai/prompt/tidy%20hallway%20with%20labeled%20shelves%20for%20school%20supplies%2C%20bright%20morning%20light?width=1024&height=1024&nologo=true",
+    "news_title": "Почти 100 тысяч детей в Казахстане ждут своей очереди в детсады",
+    "news_url": "https://ru.aulieatanews.kz/pochti-100-tysyach-detej-v-kazahstane-zhdut-svoej-ocheredi-v-detsady/"
   }
 ]
