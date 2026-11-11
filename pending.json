@@ -258,5 +258,18 @@
     "image_url": "https://image.pollinations.ai/prompt/tidy%20hallway%20with%20labeled%20shelves%20for%20school%20supplies%2C%20bright%20morning%20light?width=1024&height=1024&nologo=true",
     "news_title": "Почти 100 тысяч детей в Казахстане ждут своей очереди в детсады",
     "news_url": "https://ru.aulieatanews.kz/pochti-100-tysyach-detej-v-kazahstane-zhdut-svoej-ocheredi-v-detsady/"
+  },
+  {
+    "id": 1794373199,
+    "created_at": "2026-11-11T04:59:59.377171+00:00",
+    "topic_id": "homework",
+    "topic_title": "Домашка без слёз: как помочь, не делая за ребёнка",
+    "text_ru": "Muammo: Ребенок боится ошибок и просит помощи, что приводит к слезам. → Tushuntirish: Исследования Деси и Райана (2000) показывают, что позитивная обратная связь повышает внутреннюю мотивацию и снижает тревожность при выполнении задач. При этом дети, получающие конкретную похвалу, лучше сохраняют самостоятельность. → Yechim: Предлагайте ребенку конкретную, но краткую обратную связь после каждой выполненной части и поощряйте его самостоятельно оценить результат. → #ДомашкаБезСлез",
+    "text_uz": "Muammo: Bola xatolaridan qo'rqqan holda yordam so'rab, ko'ngilsizlikka olib keladi. → Tushuntirish: Deci va Ryan (2000) tadqiqotlari ijobiy fikr-mulohaza ichki motivatsiyani oshiradi va vazifalarga bo'lgan xavotirni kamaytiradi. Shuningdek, aniq maqtov bolalarning mustaqil ishlashini mustahkamlaydi. → Yechim: Har bir bajarilgan qismdan so'ng qisqa, aniq fikr-mulohaza bering va bolaga natijani o'zi baholash imkoniyatini yarating. → #UyVazifasiSizga",
+    "hashtag": "#ДомашкаБезСлез",
+    "new_stage": "Этап 4: Обратная связь и поощрение",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20praising%20child%20after%20homework%2C%20warm%20home%20environment%2C%20bright%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "В Самарканде на детские площадки и благоустройство дворов выделили 17 миллиардов сумов",
+    "news_url": "https://podrobno.uz/cat/obchestvo/v-samarkande-na-detskie-ploshchadki-i-blagoustroystvo-dvorov-vydelili-17-milliardov-sumov/"
   }
 ]
