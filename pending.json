@@ -284,5 +284,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Cozy%20child%20reading%20corner%20with%20colorful%20books%20and%20playful%20elements?width=1024&height=1024&nologo=true",
     "news_title": "Министр просвещения рассказала о приоритетных направлениях развития образования на XV международной конференции NIS",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1321850?lang=ru"
+  },
+  {
+    "id": 1794436235,
+    "created_at": "2026-11-11T22:30:35.971445+00:00",
+    "topic_id": "food",
+    "topic_title": "Ребёнок мало ест: когда это проблема, а когда нет",
+    "text_ru": "Muammo: Ребёнок отказывается от еды, но при этом сохраняет стабильный вес. → Tushuntirish: Исследования показывают, что у детей в возрасте 2–5 лет рост веса может оставаться стабильным даже при периодическом снижении аппетита, если их рацион остаётся питательным. Однако длительное ограничение калорий может привести к дефициту витаминов и минералов. → Yechim: Регулярно фиксируйте вес и рост, корректируя рацион по рекомендациям педиатра. → #detkiyapetit",
+    "text_uz": "Muammo: Bola ovqatni rad etadi, lekin vazni barqaror. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, 2‑5 yoshdagi bolalarda ovqat iste'moli vaqtincha kamayishi vazn barqaror bo'lsa ham, muhim vitamin va minerallar yetishmasligi xavfi bor. Uzluksiz kaloriya cheklanishi o'sish va rivojlanishga salbiy ta'sir ko'rsatadi. → Yechim: Pediatr tavsiyalariga muvofiq, vazn va bo'y o'sishini muntazam kuzatib boring va ratsionni moslang. → #detkiyapetit",
+    "hashtag": "#detkiyapetit",
+    "new_stage": "Этап 4: Мониторинг роста и веса с корректировкой рациона",
+    "image_url": "https://image.pollinations.ai/prompt/Mother%20and%20child%20sharing%20colorful%20healthy%20food%20at%20a%20sunny%20kitchen%20table?width=1024&height=1024&nologo=true",
+    "news_title": "School bomb hoax emails: 'Stay vigilant but not alarmed'",
+    "news_url": "https://www.bbc.co.uk/news/videos/ckpqrj42xvzvo?at_medium=RSS&at_campaign=rss"
   }
 ]
