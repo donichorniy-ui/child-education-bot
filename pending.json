@@ -310,5 +310,18 @@
     "image_url": "https://image.pollinations.ai/prompt/family%20playing%20board%20games%20on%20colorful%20rug%2C%20bright%20natural%20light?width=1024&height=1024&nologo=true",
     "news_title": "Узбекистан и Швеция запустят пилотную программу миграции на 1,5 года",
     "news_url": "https://www.spot.uz/ru/2026/11/11/sweden-migration/"
+  },
+  {
+    "id": 1794501502,
+    "created_at": "2026-11-12T16:38:22.925962+00:00",
+    "topic_id": "sleep",
+    "topic_title": "Как уложить ребёнка спать без скандала",
+    "text_ru": "Muammo: Дети часто сопротивляются, когда наступает время сна. → Tushuntirish: Исследования показывают, что регулярный режим сна укрепляет внутренние биоритмы и уменьшает количество ночных пробуждений. Стабильный график помогает мозгу предсказывать сон. → Yechim: Установите фиксированное время укладывания и придерживайтесь его каждый день, включая выходные; ограничьте дневной сон до 30‑45 минут. → #spokoynyyson",
+    "text_uz": "Muammo: Bolalar uxlagan vaqtida qarshilik ko'rsatishadi. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, muntazam uxlab yotish vaqti ichki biologik ritmlarni mustahkamlaydi, tungi uyg'onishlarni kamaytiradi. Barqaror jadval miyani uxlamoqni oldindan bilishga yordam beradi. → Yechim: Har kuni, dam olish kunlari ham, bir xil uxlatish vaqtini belgilab, unga qat'iy rioya qiling; kunlik uyquni 30-45 daqiqagacha cheklang. → #tinchux",
+    "hashtag": "#spokoynyyson",
+    "new_stage": "Этап 4: Установить фиксированное время укладывания и ограничить дневной сон",
+    "image_url": "https://image.pollinations.ai/prompt/a%20calm%20bedtime%20routine%20with%20a%20child%20reading%20a%20book%2C%20soft%20night%20lamp%2C%20cozy%20bedroom?width=1024&height=1024&nologo=true",
+    "news_title": "Ofsted faces fresh calls to halt graded school inspections in England",
+    "news_url": "https://www.bbc.co.uk/news/articles/cw1m45l17n7no?at_medium=RSS&at_campaign=rss"
   }
 ]
