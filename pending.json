@@ -336,5 +336,18 @@
     "image_url": "https://image.pollinations.ai/prompt/children%20sitting%20in%20a%20circle%20sharing%20feelings%2C%20warm%20friendly%20atmosphere?width=1024&height=1024&nologo=true",
     "news_title": "Secondary schools told to stop teaching GCSEs before Year 10",
     "news_url": "https://www.bbc.co.uk/news/articles/c680z89dk827o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1794570902,
+    "created_at": "2026-11-13T11:55:02.289429+00:00",
+    "topic_id": "lying",
+    "topic_title": "Ребёнок врёт: почему и что делать",
+    "text_ru": "Muammo: Ребенок часто лжет, чтобы избежать наказания. → Tushuntirish: Исследования Университета Пенсильвании показывают, что дети, получающие позитивное подкрепление за честные ответы, реже прибегают к лжи. Когда внимание родителей сосредоточено на процессе, а не только на результате, у детей формируется внутренняя мотивация говорить правду. → Yechim: Вводите небольшие игровые задания, где честность вознаграждается стикерами или дополнительным временем игры. → #ЧестностьСДетьми",
+    "text_uz": "Muammo: Bola jazodan qochish uchun tez-tez yolg\\'on gapiradi. → Tushuntirish: Pensilvaniya universiteti tadqiqotlari shuni ko'rsatadiki, halol javoblar uchun ijobiy rag'bat berilgan bolalar kamroq yolg\\'on gapirishadi. Ota-onalar e\\'tiborini natijadan ko\\'ra jarayonga qaratganda, bola ichki motivatsiya bilan haqiqatni aytishga intiladi. → Yechim: Kichik o\\'yin topshiriqlari qo\\'shing, halollik uchun stiker yoki qo\\'shimcha o\\'yin vaqti bilan mukofotlang. → #HalollikBilan",
+    "hashtag": "#ЧестностьСДетьми",
+    "new_stage": "Этап 4: Поощрение честности через игровые методы",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20playing%20truth%20game%2C%20warm%20colors%2C%20cartoon%20style?width=1024&height=1024&nologo=true",
+    "news_title": "Футбол: Узбекистан упустил преимущество в два мяча и проиграл России (+видео, фото)",
+    "news_url": "https://www.gazeta.uz/ru/2026/11/12/uzb-rus-football/"
   }
 ]
