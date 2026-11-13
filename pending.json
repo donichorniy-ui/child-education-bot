@@ -323,5 +323,18 @@
     "image_url": "https://image.pollinations.ai/prompt/a%20calm%20bedtime%20routine%20with%20a%20child%20reading%20a%20book%2C%20soft%20night%20lamp%2C%20cozy%20bedroom?width=1024&height=1024&nologo=true",
     "news_title": "Ofsted faces fresh calls to halt graded school inspections in England",
     "news_url": "https://www.bbc.co.uk/news/articles/cw1m45l17n7no?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1794531337,
+    "created_at": "2026-11-13T00:55:37.494843+00:00",
+    "topic_id": "social_skills",
+    "topic_title": "Ребёнок не умеет дружить: что делать",
+    "text_ru": "Muammo: Ребёнок избегает общения из‑за низкой уверенности в себе → Tushuntirish: Исследования Университета Пенсильвании показывают, что развитие эмоционального интеллекта повышает качество дружеских связей у детей. Групповые занятия по рефлексии помогают понять собственные чувства и реакции → Yechim: Организуйте еженедельные «круги доверия», где дети делятся переживаниями и учатся поддерживать друг друга → #ДружбаДляДетей",
+    "text_uz": "Muammo: Bola do'stlikka kirishishda o'ziga ishonchsizlik tufayli qochadi → Tushuntirish: Pensilvaniya universiteti tadqiqotlari ko'rsatadiki, emotsional intellektni rivojlantirish bolalarning do'stlik sifatini oshiradi. Guruhiy refleksiya mashg'ulotlari o'z his-tuyg'ularini tushunishga yordam beradi → Yechim: Har hafta «ishonch doirasi» tashkil etib, bolalar o'z his-tuyg'ularini baham ko'rishlari va bir-birini qo'llab-quvvatlashni o'rganishlari kerak → #Do'stlikUchun",
+    "hashtag": "#ДружбаДляДетей",
+    "new_stage": "Этап 4: Эмоциональная рефлексия и поддержка в группе",
+    "image_url": "https://image.pollinations.ai/prompt/children%20sitting%20in%20a%20circle%20sharing%20feelings%2C%20warm%20friendly%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "Secondary schools told to stop teaching GCSEs before Year 10",
+    "news_url": "https://www.bbc.co.uk/news/articles/c680z89dk827o?at_medium=RSS&at_campaign=rss"
   }
 ]
