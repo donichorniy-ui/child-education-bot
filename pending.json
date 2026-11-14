@@ -362,5 +362,18 @@
     "image_url": "https://image.pollinations.ai/prompt/mother%20and%20child%20playing%20a%20separation%20game%2C%20bright%2C%20supportive%2C%20indoor?width=1024&height=1024&nologo=true",
     "news_title": "Global Microsoft outage affects NI schools, councils and other services",
     "news_url": "https://www.bbc.co.uk/news/articles/crgqx8l7ngqlo?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1794617008,
+    "created_at": "2026-11-14T00:43:28.274375+00:00",
+    "topic_id": "picky_eater",
+    "topic_title": "Ребёнок-малоежка: как не сойти с ума",
+    "text_ru": "Muammo: Недостаток качественного сна ухудшает эмоциональное состояние ребёнка. → Tushuntirish: Исследования WHO показывают, что дети 2‑5 лет, спящие менее 10 часов, имеют повышенный риск гиперактивности и проблем с вниманием. → Yechim: Установите регулярный режим сна, ограничьте экранное время за час до сна и создайте спокойную обстановку в комнате. → #MaloeshkaUz",
+    "text_uz": "Muammo: Yetarli uyqu yetishmasligi bola xulq-atvoriga salbiy ta'sir qiladi. → Tushuntirish: WHO tadqiqotiga ko'ra, 2‑5 yoshdagi bolalar kuniga 10 soatdan kam uyqu uxlaganda, giperaktivlik va diqqat muammolari ko'payadi. → Yechim: Uyqu rejimini muntazam belgilash, ekran vaqtini bir soat oldin cheklash va xotirjam muhit yaratish. → #MaloeshkaUz",
+    "hashtag": "#MaloeshkaUz",
+    "new_stage": "Этап 4: Поддержка здорового сна и режима дня",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20and%20child%20sleeping%20peacefully%20in%20a%20softly%20lit%20bedroom?width=1024&height=1024&nologo=true",
+    "news_title": "Public Schools Have a New Crisis: Not Enough Students",
+    "news_url": "https://www.nytimes.com/2026/11/11/podcasts/the-daily/closing-public-schools-enrollment-crisis.html"
   }
 ]
