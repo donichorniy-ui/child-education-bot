@@ -375,5 +375,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Parent%20and%20child%20sleeping%20peacefully%20in%20a%20softly%20lit%20bedroom?width=1024&height=1024&nologo=true",
     "news_title": "Public Schools Have a New Crisis: Not Enough Students",
     "news_url": "https://www.nytimes.com/2026/11/11/podcasts/the-daily/closing-public-schools-enrollment-crisis.html"
+  },
+  {
+    "id": 1794654909,
+    "created_at": "2026-11-14T11:15:09.627998+00:00",
+    "topic_id": "sibling_rivalry",
+    "topic_title": "Ревность между детьми: как помочь",
+    "text_ru": "Muammo: Ссоры из‑за ревности усиливаются, когда дети не умеют решать конфликты. → Tushuntirish: Исследования Американской Психологической Ассоциации показывают, что обучение детей навыкам совместного решения проблем снижает уровень агрессии на 30 %. При совместных играх дети учатся договариваться и воспринимать чувства друг друга. → Yechim: Вводите семейные «мирные часы», где каждый может предложить решение конфликта, а родители помогают выбрать компромисс. #СемейныйМир",
+    "text_uz": "Muammo: Rejissiya tufayli bolalar o'rtasida janjallar kuchayadi, agar ular muammolarni hal qilishni bilmasa. → Tushuntirish: American Psychological Association tadqiqotlari shuni ko'rsatadiki, bolalarga muammolarni birgalikda hal qilish ko'nikmasini o'rgatish agressiyani 30% ga kamaytiradi. Birgalikdagi o'yinlar orqali bolalar kelishib olishni va bir-birining his-tuyg'ularini tushunishni o'rganadilar. → Yechim: Har kuni 'tinchlik soati' belgilab, har bir bola muammoni qanday hal qilishni taklif qilsin, ota-ona esa muvofiq kelishuvni tanlasin. #СемейныйМир",
+    "hashtag": "#СемейныйМир",
+    "new_stage": "Этап 4: Управление конфликтами и совместное решение проблем",
+    "image_url": "https://image.pollinations.ai/prompt/Two%20children%20sharing%20toys%20peacefully%2C%20smiling%2C%20bright%20home%20interior?width=1024&height=1024&nologo=true",
+    "news_title": "В Министерстве просвещения представлены новые руководители",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1324363?lang=ru"
   }
 ]
