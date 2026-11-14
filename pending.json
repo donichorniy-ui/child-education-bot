@@ -388,5 +388,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Two%20children%20sharing%20toys%20peacefully%2C%20smiling%2C%20bright%20home%20interior?width=1024&height=1024&nologo=true",
     "news_title": "В Министерстве просвещения представлены новые руководители",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1324363?lang=ru"
+  },
+  {
+    "id": 1794678224,
+    "created_at": "2026-11-14T17:43:44.147535+00:00",
+    "topic_id": "discipline",
+    "topic_title": "Наказывать или договариваться: что работает",
+    "text_ru": "Muammo Родители часто не дают ребенку возможности самостоятельно решать мелкие конфликты, что ограничивает развитие навыков саморегуляции → Tushuntirish Исследования Калифорнийского университета показывают, что дети, которым позволяют принимать решения в безопасных ситуациях, лучше справляются со стрессом и реже требуют наказаний. Кроме того, теория самодетерминации подтверждает, что автономия повышает внутреннюю мотивацию → Yechim Предлагайте ребенку выбор в рамках правил и совместно ищите решения конфликтов. Это укрепит его уверенность и уменьшит необходимость в наказании → #СамоРегуляция",
+    "text_uz": "Muammo Ota-onalar bolalarga kichik mojaro hal qilishda mustaqil qaror qabul qilish imkoniyatini bermaydilar, bu esa o'z-o'zini boshqarish ko'nikmalarini rivojlantirishni cheklaydi → Tushuntirish Kaliforniya universiteti tadqiqotlari shuni ko'rsatadiki, xavfsiz vaziyatlarda qaror qabul qilishga ruxsat berilgan bolalar stressni yaxshiroq boshqaradilar va jazoga ehtiyoj kamroq bo'ladi. Shuningdek, o'zini o'zi boshqarish nazariyasi ichki motivatsiyani oshirishini tasdiqlaydi → Yechim Qoidalar doirasida bolaga tanlov taklif qiling va mojaro yechimini birgalikda toping. Bu uning ishonchini mustahkamlaydi va jazolash zaruratini kamaytiradi → #O'zBoshqaruv",
+    "hashtag": "#СамоРегуляция",
+    "new_stage": "Этап 4: Поддержка самостоятельного принятия решений ребёнком",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20discussing%20choices%20in%20warm%20home%2C%20soft%20lighting?width=1024&height=1024&nologo=true",
+    "news_title": "В Алматы пройдет IV международная конференция «Шахматы в образовании»",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1322480?lang=ru"
   }
 ]
