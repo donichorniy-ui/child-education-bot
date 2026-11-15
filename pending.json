@@ -427,5 +427,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Mother%20using%20phone%20with%20supportive%20community%20icons%2C%20calm%20colors%2C%20modern%20style?width=1024&height=1024&nologo=true",
     "news_title": "138,000 New York City Students Were Homeless Last School Year",
     "news_url": "https://www.nytimes.com/2026/11/10/nyregion/new-york-city-students-homeless.html"
+  },
+  {
+    "id": 1794756314,
+    "created_at": "2026-11-15T15:25:14.018940+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Muammo: Недостаток правовой защиты при публикации детских фото. → Tushuntirish: По данным UNICEF, 70% родителей в Узбекистане публикуют фотографии детей в соцсетях, однако национальное законодательство лишь частично регулирует обработку персональных данных несовершеннолетних, что повышает риск их несанкционированного использования. Исследования показывают, что отсутствие чётких правовых норм затрудняет привлечение нарушителей к ответственности. → Yechim: Необходимо внедрить обучающие программы по юридическим аспектам и продвигать нормативные акты, защищающие детей в интернете. → #bezopasnostdeti",
+    "text_uz": "Muammo: Bolaning fotosuratlarini onlayn joylashtirishda huquqiy himoya yetarli emas. → Tushuntirish: UNICEF ma'lumotlariga ko'ra, O'zbekistondagi ota-onalarning 70% bolalarining fotosuratlarini ijtimoiy tarmoqlarda bo'lishadi, ammo milliy qonunchilik kichik yoshdagi shaxslarning ma'lumotlarini himoya qilish bo'yicha cheklangan. Tadqiqotlar shuni ko'rsatadiki, aniq huquqiy me'yorlar yo'qligi bu holatni oldini olishni qiyinlashtiradi. → Yechim: Ota-onalar uchun huquqiy ma'rifat kurslarini tashkil etish va bolalarning onlayn maxfiyligini himoya qiluvchi qonunlarni kuchaytirish lozim. → #bezopasnostdeti",
+    "hashtag": "#bezopasnostdeti",
+    "new_stage": "Этап 5: Правовое регулирование и ответственность за публикацию детских фото",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20holding%20child%27s%20photo%2C%20digital%20lock%20icon%2C%20subtle%20background%2C%20modern%20style?width=1024&height=1024&nologo=true",
+    "news_title": "Laughter and learning at BBC Children in Need-backed homework club",
+    "news_url": "https://www.bbc.co.uk/news/articles/cm5y186164w8o?at_medium=RSS&at_campaign=rss"
   }
 ]
