@@ -453,5 +453,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Parent%20reading%20a%20picture%20book%20to%20a%20toddler%2C%20warm%20home%20interior%2C%20no%20screens%2C%20soft%20lighting?width=1024&height=1024&nologo=true",
     "news_title": "How the University of North Carolina Tried to Avoid Trump’s Wrath",
     "news_url": "https://www.nytimes.com/2026/11/13/us/university-north-carolina-science-research-cuts-trump.html"
+  },
+  {
+    "id": 1794805757,
+    "created_at": "2026-11-16T05:09:17.959020+00:00",
+    "topic_id": "cartoons_under3",
+    "topic_title": "Мультики до 3 лет: где граница вреда",
+    "text_ru": "Muammo: Дети часто сами выбирают мультфильмы, не понимая их влияния. → Tushuntirish: Исследования Американской академии педиатрии показывают, что развитие медиа‑грамотности с раннего возраста снижает риск пассивного потребления контента и улучшает критическое мышление. → Yechim: Родители предлагают ограниченный набор качественных мультфильмов и совместно обсуждают выбор, обучая ребёнка оценивать содержание. → #MediaGramotlik",
+    "text_uz": "Muammo: Bolalar o'zlari ko'rish uchun multfilmlarni tanlashda noto'g'ri qarorlar qabul qilishadi. → Tushuntirish: Amerika pediatriya akademiyasining tadqiqotlari shuni ko'rsatadiki, erta yoshda media gramotlikni rivojlantirish passiv kontent iste'molini kamaytiradi va tanqidiy fikrlashni oshiradi. → Yechim: Ota-onalar bolalarga bir nechta sifatli variantlar taklif qilib, tanlovni boshqarishga yordam berishlari va mazmunni birga tahlil qilishlari kerak. → #MediaGramotlik",
+    "hashtag": "#MediaGramotlik",
+    "new_stage": "Этап 5",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20guiding%20toddler%20choosing%20cartoon%20on%20tablet%2C%20bright%20colors%2C%20educational%20setting?width=1024&height=1024&nologo=true",
+    "news_title": "ЮНЕСКО и Узбекистан на пути к глобальному диалогу",
+    "news_url": "https://uza.uz/ru/posts/yunesko-i-uzbekistan-na-puti-k-globalnomu-dialogu_938083"
   }
 ]
