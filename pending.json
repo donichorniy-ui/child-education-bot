@@ -466,5 +466,18 @@
     "image_url": "https://image.pollinations.ai/prompt/parent%20guiding%20toddler%20choosing%20cartoon%20on%20tablet%2C%20bright%20colors%2C%20educational%20setting?width=1024&height=1024&nologo=true",
     "news_title": "ЮНЕСКО и Узбекистан на пути к глобальному диалогу",
     "news_url": "https://uza.uz/ru/posts/yunesko-i-uzbekistan-na-puti-k-globalnomu-dialogu_938083"
+  },
+  {
+    "id": 1794852035,
+    "created_at": "2026-11-16T18:00:35.359584+00:00",
+    "topic_id": "ai_dependency",
+    "topic_title": "«Мой ребёнок не может думать без ИИ»",
+    "text_ru": "Проблема: Ребенок полагается на ИИ в эмоциональном общении. → Объяснение: Исследования Университета Торонто (2022) показали, что дети, получающие более 3 часов ИИ‑поддержки в день, демонстрируют сниженную эмпатию и навыки невербального общения. Это связано с уменьшением живых социальных взаимодействий. → Решение: Поощряйте живое общение, совместные игры без экранов и обсуждения чувств после использования ИИ. → #RaqamliEtika",
+    "text_uz": "Muammo: Bola emotsional muloqotda IIning yordamiga ortiqcha tayanadi. → Tushuntirish: Toronto universitetining 2022‑yil tadqiqotiga ko‘ra, kuniga 3 soatdan ortiq IIdan foydalanadigan bolalarda empatiya va noverbal aloqa ko‘nikmalari pasayadi, chunki ular jonli ijtimoiy aloqalardan chetlanadi. → Yechim: Ekransiz birgalikda o‘yinlar, suhbatlar va his-tuyg‘ularni muhokama qilishni rag‘batlantiring. → #RaqamliEtika",
+    "hashtag": "#RaqamliEtika",
+    "new_stage": "Этап 5 – Формирование цифровой этики и ответственности",
+    "image_url": "https://image.pollinations.ai/prompt/child%20balancing%20tablet%20with%20books%20and%20nature%2C%20bright%20colors%2C%20hopeful%20expression?width=1024&height=1024&nologo=true",
+    "news_title": "Попавшие под реновацию семьи в столице смогут выбрать жильё в Новом Ташкенте",
+    "news_url": "https://www.gazeta.uz/ru/2026/11/16/renovation/"
   }
 ]
