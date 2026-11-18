@@ -531,5 +531,18 @@
     "image_url": "https://image.pollinations.ai/prompt/happy%20child%20with%20school%20backpack%2C%20sunny%20park%2C%20vibrant%20colors?width=1024&height=1024&nologo=true",
     "news_title": "Schools Are Closing Nationwide as Enrollment Drops. Parents Are Livid.",
     "news_url": "https://www.nytimes.com/2026/11/17/us/public-schools-closing-birth-rate-enrollment.html"
+  },
+  {
+    "id": 1794982512,
+    "created_at": "2026-11-18T06:15:12.724698+00:00",
+    "topic_id": "child_fears",
+    "topic_title": "Детские страхи: когда это норма, а когда проблема",
+    "text_ru": "Muammo: После укрепления уверенности дети могут вновь переживать страхи в новых ситуациях. → Tushuntirish: Исследования показывают, что без систематической профилактики около 30% детей возвращаются к прежним страхам (American Academy of Pediatrics, 2022). Поэтому важно развивать навыки самостоятельного решения проблем и поддерживать их в новых вызовах. → Yechim: Вводим регулярные упражнения по решению проблем, обсуждаем возможные сценарии и закрепляем стратегии саморегуляции. → #DetiBezStraha",
+    "text_uz": "Muammo: Bolalar ishonchni mustahkamlashdan keyin yangi vaziyatlarda yana qo'rquvga duch kelishi mumkin. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, muntazam profilaktik yondashuv bo'lmasa, 30% bolalar eski qo'rquvlariga qaytadi (American Academy of Pediatrics, 2022). Shuning uchun mustaqil muammolarni hal qilish ko'nikmalarini rivojlantirish va yangi sinovlarda qo'llab-quvvatlash muhim. → Yechim: Muammolarni hal qilish mashqlarini joriy etish, turli scenariylarni muhokama qilish va o'z-o'zini boshqarish strategiyalarini mustahkamlash. → #DetiBezStraha",
+    "hashtag": "#DetiBezStraha",
+    "new_stage": "Этап 5 – Профилактика рецидивов и развитие навыков самостоятельного решения проблем",
+    "image_url": "https://image.pollinations.ai/prompt/child%20confidently%20solving%20a%20puzzle%20with%20supportive%20parents%2C%20bright%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "School offers prizes to pupils for turning up to class on day GTA 6 comes out",
+    "news_url": "https://www.bbc.co.uk/news/articles/crp3e10kpz19o?at_medium=RSS&at_campaign=rss"
   }
 ]
