@@ -557,5 +557,18 @@
     "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20calmly%20discussing%20emotions%2C%20colorful%20notebook%2C%20warm%20home%20setting?width=1024&height=1024&nologo=true",
     "news_title": "В Астане определены победители республиканского шахматного турнира среди учащихся «Келешек мектептері»",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1327911?lang=ru"
+  },
+  {
+    "id": 1795052724,
+    "created_at": "2026-11-19T01:45:24.380994+00:00",
+    "topic_id": "praise",
+    "topic_title": "Как хвалить ребёнка, чтобы он не боялся ошибок",
+    "text_ru": "Muammo: Ребенок боится ошибаться, потому что считает их признаком некомпетентности. → Tushuntirish: Исследования Двек (2006) показывают, что похвала за процесс развития метакогнитивных навыков укрепляет ростовой менталитет и снижает страх ошибок. При этом дети, получающие такие подкрепления, лучше планируют обучение и оценивают свои результаты. → Yechim: Хвалите ребёнка за умение ставить цели, отслеживать прогресс и корректировать стратегии; это развивает уверенность в собственных способностях. → #RoditeliUz",
+    "text_uz": "Muammo: Bola xatolik qilishdan qo'rqadi, chunki ularni o'zini yetersiz deb hisoblaydi. → Tushuntirish: Dweck (2006) tadqiqotlari shuni ko'rsatadiki, metakognitiv ko'nikmalarni rivojlantirish uchun beriladigan maqtov o'sish mentalitetini mustahkamlaydi va xatolikka bo'lgan qo'rquvni kamaytiradi. Bunday maqtov olgan bolalar o'z o'rganish rejasini tuzish va natijalarni baholashda yaxshiroq bo'ladilar. → Yechim: Bolani maqsad qo'yish, o'z progressini kuzatish va strategiyalarni moslashtirishga maqtang; bu o'ziga ishonchni oshiradi. → #OtaOnalarUz",
+    "hashtag": "#RoditeliUz",
+    "new_stage": "Этап 5: Похвала за развитие метакогнитивных навыков и постановку целей",
+    "image_url": "https://image.pollinations.ai/prompt/Parent%20praising%20child%20for%20setting%20learning%20goals%2C%20bright%20classroom%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "В Узбекистане откроют бюст казахского писателя Рахметоллы Раимкулов",
+    "news_url": "https://uza.uz/ru/posts/v-uzbekistane-otkroyut-byust-kazaxskogo-pisatelya-raxmetolly-raimkulov_940298"
   }
 ]
