@@ -583,5 +583,18 @@
     "image_url": null,
     "news_title": "School offers prizes to pupils for turning up to class on day GTA 6 comes out",
     "news_url": "https://www.bbc.co.uk/news/articles/crp3e10kpz19o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1795128956,
+    "created_at": "2026-11-19T22:55:56.040675+00:00",
+    "topic_id": "homework",
+    "topic_title": "Домашка без слёз: как помочь, не делая за ребёнка",
+    "text_ru": "Muammo: Ребенок всё ещё зависит от проверки родителей, что снижает самостоятельность → Tushuntirish: По данным исследований, направленная самооценка усиливает метакогнитивные навыки; в журнале American Educational Research Journal (2020) отмечено, что дети, оценивающие собственные задания, становятся более автономными и менее тревожными → Yechim: Введите после каждой домашки короткий чек‑лист для самооценки и рефлексию, постепенно уменьшая вмешательство родителей → #ДомашкаБезСлез",
+    "text_uz": "Muammo: Bola hali ham ota-onaning tekshirishiga tayanadi, bu mustaqillikni kamaytiradi → Tushuntirish: Vygotsky nazariyasiga (1978) ko'ra, yo'naltirilgan o'z-o'zini baholash metakognitsiyani oshiradi; 2020 yildagi American Educational Research Journalda o'z ishini baholagan bolalarda mustaqillik va kayfiyat pasayishi ko'rsatilgan → Yechim: Har bir topshiriqdan keyin qisqa o'z-o'zini baholash ro'yxati va refleksiyani joriy qiling, ota-ona nazoratini asta-sekin kamaytiring → #UyVazifasiSizSog'inch",
+    "hashtag": "#ДомашкаБезСлез",
+    "new_stage": "Этап 5: Самооценка и рефлексия выполнения заданий",
+    "image_url": "https://image.pollinations.ai/prompt/child%20reviewing%20homework%20checklist%20at%20tidy%20desk%2C%20warm%20lighting?width=1024&height=1024&nologo=true",
+    "news_title": "Алматинские школьники представили экологические проекты на экофоруме",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1321856?lang=ru"
   }
 ]
