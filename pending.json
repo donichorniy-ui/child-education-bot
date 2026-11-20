@@ -596,5 +596,18 @@
     "image_url": "https://image.pollinations.ai/prompt/child%20reviewing%20homework%20checklist%20at%20tidy%20desk%2C%20warm%20lighting?width=1024&height=1024&nologo=true",
     "news_title": "Алматинские школьники представили экологические проекты на экофоруме",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1321856?lang=ru"
+  },
+  {
+    "id": 1795154430,
+    "created_at": "2026-11-20T06:00:30.825002+00:00",
+    "topic_id": "reading",
+    "topic_title": "Как привить любовь к чтению, если ребёнок не хочет",
+    "text_ru": "Muammo: Ребенок теряет интерес к чтению, когда ему навязывают книги без выбора. → Tushuntirish: Исследования по самоопределению (Deci, Ryan, 2000) показывают, что возможность самостоятельно выбирать книги повышает внутреннюю мотивацию к чтению. По данным Национального литературного фонда UK, дети, выбирающие книги сами, читают в среднем на 30% больше. → Yechim: Позвольте ребенку самостоятельно подбирать книги в рамках заданных тем и обсудите его выбор, создавая чувство ответственности. → #ЧтениеСЛюбовью",
+    "text_uz": "Muammo: Bola kitob tanlashda majburlashga duch kelganda, o'qishga qiziqishini yo'qotadi. → Tushuntirish: Deci va Ryan (2000) o'zini boshqarish nazariyasiga ko'ra, o'z ixtiyori bilan kitob tanlagan bolalarda ichki motivatsiya oshadi. Britaniyaning National Literacy Trust tadqiqotiga ko'ra, mustaqil tanlagan kitoblar bilan o'qigan bolalar o'rtacha 30% ko'proq o'qiydi. → Yechim: Bolaga mavzular doirasida o'z ixtiyorida kitob tanlashga ruxsat bering, tanlovini muhokama qiling va mas'uliyat hissini rivojlantiring. → #KitobSevgi",
+    "hashtag": "#ЧтениеСЛюбовью",
+    "new_stage": "Этап 5: Поощрение самостоятельного выбора книг и развитие ответственности",
+    "image_url": "https://image.pollinations.ai/prompt/Cozy%20child%20reading%20chosen%20book%20in%20bright%20corner%2C%20warm%20lighting%2C%20colorful%20bookshelves?width=1024&height=1024&nologo=true",
+    "news_title": "В Алматы пройдет IV международная конференция «Шахматы в образовании»",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1322480?lang=ru"
   }
 ]
