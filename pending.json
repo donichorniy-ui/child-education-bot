@@ -609,5 +609,18 @@
     "image_url": "https://image.pollinations.ai/prompt/Cozy%20child%20reading%20chosen%20book%20in%20bright%20corner%2C%20warm%20lighting%2C%20colorful%20bookshelves?width=1024&height=1024&nologo=true",
     "news_title": "В Алматы пройдет IV международная конференция «Шахматы в образовании»",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1322480?lang=ru"
+  },
+  {
+    "id": 1795193126,
+    "created_at": "2026-11-20T16:45:26.995919+00:00",
+    "topic_id": "food",
+    "topic_title": "Ребёнок мало ест: когда это проблема, а когда нет",
+    "text_ru": "Muammo: Ребёнок отказывается от еды из‑за стресса в семье. → Tushuntirish: Исследования показывают, что эмоциональное напряжение снижает аппетит у детей, особенно в период школьных перемен (Journal of Child Psychology, 2022). Поддержка родителей и создание спокойной обстановки помогают восстановить нормальный прием пищи. → Yechim: Внедрите семейные ритуалы питания без экранов и обсудите чувства ребёнка, при необходимости привлеките детского психолога. → #СемейныйАппетит",
+    "text_uz": "Muammo: Bola oilaviy stress sababli ovqatdan voz kechmoqda. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, emosional bosim bolalarda ishtahani kamaytiradi, ayniqsa maktabga o'tish davrida (Journal of Child Psychology, 2022). Xotirjam muhit yaratish va ota-ona qo'llab-quvvatlashi normal ovqatlanishga yordam beradi. → Yechim: Oila bilan ekranlarsiz ovqatlanish marosimlarini joriy qiling, bola his-tuyg'ularini muhokama qiling, zarur bo'lsa bolalar psixologiga murojaat qiling. → #OilaOvqat",
+    "hashtag": "#СемейныйАппетит",
+    "new_stage": "Этап 5: Психологическая поддержка и вовлечение семьи",
+    "image_url": "https://image.pollinations.ai/prompt/family%20having%20a%20calm%20meal%20together%2C%20bright%20kitchen%2C%20child%20smiling?width=1024&height=1024&nologo=true",
+    "news_title": "За последние три года в Казахстане создано 234 тыс. новых мест в дошкольных организациях – Минпросвещения",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334069?lang=ru"
   }
 ]
