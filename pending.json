@@ -687,5 +687,18 @@
     "image_url": "https://image.pollinations.ai/prompt/mother%20and%20child%20playing%20independently%20in%20a%20bright%20room?width=1024&height=1024&nologo=true",
     "news_title": "В Астане 433 ученика сельских школ участвуют в финале республиканской олимпиады",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1332530?lang=ru"
+  },
+  {
+    "id": 1795383665,
+    "created_at": "2026-11-22T21:41:05.816291+00:00",
+    "topic_id": "picky_eater",
+    "topic_title": "Ребёнок-малоежка: как не сойти с ума",
+    "text_ru": "Muammo: Ребенок малоактивен и питается неправильно → Tushuntirish: Исследования WHO 2020 подтверждают, что регулярная физическая активность и сбалансированное питание снижают уровень стресса у детей и улучшают сон. → Yechim: Включите в распорядок минимум 60 минут активных игр и разнообразные овощи и фрукты. → #SoglomBolalar",
+    "text_uz": "Muammo: Bolada jismoniy harakatsizlik va noto'g'ri ovqatlanish → Tushuntirish: Tadqiqotlar WHO 2020 ko'rsatadiki, muntazam jismoniy faoliyat va muvozanatli ovqat stress darajasini pasaytiradi va uyquni yaxshilaydi. → Yechim: Kuniga kamida 60 daqiqa faol harakat va meva-sabzavotga boy ratsionni qo'shing. → #SoglomBolalar",
+    "hashtag": "#SoglomBolalar",
+    "new_stage": "Этап 5: Развитие физической активности и здорового питания",
+    "image_url": "https://image.pollinations.ai/prompt/happy%20child%20playing%20outside%20in%20sunny%20park%2C%20parents%20watching%2C%20vibrant%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "Современная молодёжь и поиск пути к самостоятельной жизни",
+    "news_url": "https://uza.uz/ru/posts/sovremennaya-molodyozh-i-poisk-puti-k-samostoyatelnoy-zhizni_942132"
   }
 ]
