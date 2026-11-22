@@ -661,5 +661,18 @@
     "image_url": "https://image.pollinations.ai/prompt/a%20group%20of%20children%20and%20a%20teen%20mentor%20walking%20in%20a%20park%2C%20bright%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
     "news_title": "NYC School Worker With Arrest Record Charged With Attempted Murder",
     "news_url": "https://www.nytimes.com/2026/11/19/nyregion/brooklyn-charter-school-gun.html"
+  },
+  {
+    "id": 1795325365,
+    "created_at": "2026-11-22T05:29:25.670081+00:00",
+    "topic_id": "lying",
+    "topic_title": "Ребёнок врёт: почему и что делать",
+    "text_ru": "Muammo: Дети часто лгут, когда боятся наказания за нарушение семейных правил → Tushuntirish: Исследования показывают, что участие ребёнка в создании правил повышает его ответственность и снижает склонность к лжи (Kelley, 2020). Когда правила обсуждаются совместно, ребёнок воспринимает их как справедливые и менее страшные → Yechim: Вместе с ребёнком сформулируйте простые домашние правила и обсудите последствия их нарушения, подчеркивая ценность честности → #SemeyaviyHalollik",
+    "text_uz": "Muammo: Bolalar oilaviy qoidalarni buzganida jazodan qo'rqib, yolgon gapirishadi → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, bola qoidalarni birgalikda tuzishda ishtirok etsa, javobgarlik hissi ortib, yolgon gapirish ehtimoli kamayadi (Kelley, 2020). Birgalikda muhokama qilingan qoidalar adolatli deb hisoblansa, qorquv kamayadi → Yechim: Bolangiz bilan oddiy oilaviy qoidalarni birgalikda tuzing, ularning buzilishi natijasini muhokama qiling, halollikni qadrlashni ta'kidlang → #OilaviyHalollik",
+    "hashtag": "#SemeyaviyHalollik",
+    "new_stage": "Этап 5: Совместное создание семейных правил",
+    "image_url": "https://image.pollinations.ai/prompt/Parents%20and%20child%20creating%20house%20rules%20together%2C%20warm%20home%20interior%2C%20smiling%20illustration?width=1024&height=1024&nologo=true",
+    "news_title": "Новых 11 колледжей планируют построить в Казахстане",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334072?lang=ru"
   }
 ]
