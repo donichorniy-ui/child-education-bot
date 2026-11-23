@@ -713,5 +713,18 @@
     "image_url": "https://image.pollinations.ai/prompt/two%20children%20playing%20happily%20with%20supportive%20parents%2C%20bright%20colors?width=1024&height=1024&nologo=true",
     "news_title": "Tories pledge to halt screen-based school exams and cut coursework",
     "news_url": "https://www.bbc.co.uk/news/articles/cwr7gnkd7m04o?at_medium=RSS&at_campaign=rss"
+  },
+  {
+    "id": 1795463694,
+    "created_at": "2026-11-23T19:54:54.124938+00:00",
+    "topic_id": "discipline",
+    "topic_title": "Наказывать или договариваться: что работает",
+    "text_ru": "Muammo: Ребёнок часто теряется в выборе, когда нет чётких границ. → Tushuntirish: Исследования показали, что развитие навыков саморегуляции у детей снижает конфликтность на 30% (Harvard 2020). При этом эмоциональный интеллект помогает понимать свои чувства и реагировать адекватно. → Yechim: Вводим ежедневные короткие практики «паузы» и обсуждения эмоций, позволяющие ребёнку самостоятельно регулировать поведение. → #Саморегуляция",
+    "text_uz": "Muammo: Bola tanlovda yo'qolib, cheklovlar aniq bo'lmaganda qiyinlashadi. → Tushuntirish: Tadqiqotlar ko'rsatadiki, bolalarda o'zini boshqarish ko'nikmalarini rivojlantirish konfliktlarni 30% kamaytiradi (Harvard 2020). Emotsional intellekt esa his-tuyg'ularni tushunishga yordam beradi. → Yechim: Kundalik qisqa \"pauza\" mashqlarini va his-tuyg'ularni muhokama qilishni joriy etish, bola o'z harakatini mustaqil boshqaradi. → #Samoregulatsiya",
+    "hashtag": "#Саморегуляция",
+    "new_stage": "Этап 5: Развитие навыков саморегуляции и эмоционального интеллекта",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20practicing%20breathing%20exercise%2C%20calm%20home%20environment?width=1024&height=1024&nologo=true",
+    "news_title": "В Астане определены победители республиканского шахматного турнира среди учащихся «Келешек мектептері»",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1327911?lang=ru"
   }
 ]
