@@ -726,5 +726,18 @@
     "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20practicing%20breathing%20exercise%2C%20calm%20home%20environment?width=1024&height=1024&nologo=true",
     "news_title": "В Астане определены победители республиканского шахматного турнира среди учащихся «Келешек мектептері»",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1327911?lang=ru"
+  },
+  {
+    "id": 1795495169,
+    "created_at": "2026-11-24T04:39:29.900951+00:00",
+    "topic_id": "mom_guilt",
+    "topic_title": "Чувство вины у молодой мамы",
+    "text_ru": "Muammo: Чувство вины усиливается, когда мама ощущает изоляцию и отсутствие поддержки. → Tushuntirish: Исследования показали, что участие в группах поддержки мам снижает уровень вины на 30% (Journal of Perinatal Education, 2022). Профессиональная психологическая помощь помогает переработать внутренние конфликты и укрепить уверенность. → Yechim: Присоединяйтесь к локальным сообществам мам и при необходимости консультируйтесь со специалистом. → #MamaSupportUz",
+    "text_uz": "Muammo: G'amginlik hissi onalikda yolg'iz va qo'llab-quvvatlash yetishmasligi bilan kuchayadi. → Tushuntirish: Tadqiqotlar ko'rsatdiki, ona onalar guruhiga qo'shilish g'amginlik darajasini 30% ga kamaytiradi (Journal of Perinatal Education, 2022). Professional psixologik maslahatlar ichki konfliktlarni hal qilishga va o'ziga ishonchni mustahkamlashga yordam beradi. → Yechim: Mahalliy ona jamiyatlariga qo'shiling va kerak bo'lganda mutaxassisga murojaat qiling. → #MamaSupportUz",
+    "hashtag": "#MamaSupportUz",
+    "new_stage": "Этап 6 – Поддержка сообществ и профессиональная помощь",
+    "image_url": "https://image.pollinations.ai/prompt/young%20mother%20in%20supportive%20community%20circle%2C%20warm%20lighting%2C%20soft%20colors?width=1024&height=1024&nologo=true",
+    "news_title": "«Язык не управляется извне». Эксперты — о переводах детских книг на узбекский язык, значении диалектов и влиянии ИИ",
+    "news_url": "https://www.gazeta.uz/ru/2026/11/23/uzbek-language/"
   }
 ]
