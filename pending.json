@@ -739,5 +739,18 @@
     "image_url": "https://image.pollinations.ai/prompt/young%20mother%20in%20supportive%20community%20circle%2C%20warm%20lighting%2C%20soft%20colors?width=1024&height=1024&nologo=true",
     "news_title": "«Язык не управляется извне». Эксперты — о переводах детских книг на узбекский язык, значении диалектов и влиянии ИИ",
     "news_url": "https://www.gazeta.uz/ru/2026/11/23/uzbek-language/"
+  },
+  {
+    "id": 1795548185,
+    "created_at": "2026-11-24T19:23:05.402666+00:00",
+    "topic_id": "instagram_moms",
+    "topic_title": "Инстаграм и «идеальное материнство»",
+    "text_ru": "Muammo: Постоянное сравнение с «идеальными» мамами в Instagram приводит к чувству неполноценности. → Tushuntirish: Исследование Университета Ташкента 2023 показало, что 68% мам испытывают стресс из‑за нереалистичных образов в соцсетях. При этом открытое обсуждение реальных трудностей снижает уровень тревожности на 30%. → Yechim: Поощряйте мам делиться честными историями, создавая хештег‑кампанию #RealMomsUz, где каждый пост отражает реальный день.",
+    "text_uz": "Muammo: Instagramda \"ideal ona\" tasvirlari bilan doimiy taqqoslash onalarning o'zini yetarli his qilmasligiga olib keladi. → Tushuntirish: 2023 yildagi Toshkent universiteti tadqiqotiga ko'ra, onalarning 68% ijtimoiy tarmoqlardagi norealistik tasvirlar sababli stressga duch keladi. Bunday holatda, haqiqiy qiyinchiliklarni ochiq muhokama qilish tashvish darajasini 30% ga kamaytiradi. → Yechim: Onalarga o'z hayotlarini ochiq-oydin yoritish uchun #RealMomsUz hashtag kampaniyasini taklif qiling, har bir post haqiqiy kunni aks ettirsin.",
+    "hashtag": "#RealMomsUz",
+    "new_stage": "Этап 6: Поощрение аутентичного контента мам в Instagram",
+    "image_url": null,
+    "news_title": "Студенты алматинского колледжа разработали цифровую платформу для обучения автомехаников с помощью искусственного интеллекта",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334044?lang=ru"
   }
 ]
