@@ -752,5 +752,18 @@
     "image_url": null,
     "news_title": "Студенты алматинского колледжа разработали цифровую платформу для обучения автомехаников с помощью искусственного интеллекта",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334044?lang=ru"
+  },
+  {
+    "id": 1795577073,
+    "created_at": "2026-11-25T03:24:33.441802+00:00",
+    "topic_id": "sharenting",
+    "topic_title": "Шерентинг: можно ли выкладывать фото ребёнка",
+    "text_ru": "Muammo: Родители часто не знают, как правильно объяснить ребёнку последствия публикации его фото в соцсетях. → Tushuntirish: По данным UNICEF, дети, чьи изображения распространяются без их согласия, могут испытывать тревожность и нарушение приватности. Исследования показывают, что раннее обсуждение цифровой этики снижает риск негативных последствий. → Yechim: Ввести семейные «цифровые правила», где ребёнок участвует в принятии решений о публикации своих фото. → #DigitalParentingUZ",
+    "text_uz": "Muammo: Ota-onalar bolalarining fotosuratlarini ijtimoiy tarmoqlarda joylash haqida to'g'ri tushuntirishni bilmaydi. → Tushuntirish: UNICEF ma'lumotlariga ko'ra, ruxsatsiz tarqatilgan bolalar foto tasvirlari xavotir va maxfiylikni buzishga olib keladi. Tadqiqotlar shuni ko'rsatadiki, raqamli axloq haqida erta suhbatlar salbiy ta'sirni kamaytiradi. → Yechim: Oila ichida «raqamli qoidalar» joriy qilib, bolani foto joylash qaroriga jalb qilish. → #DigitalParentingUZ",
+    "hashtag": "#DigitalParentingUZ",
+    "new_stage": "Этап 6: Этическое воспитание детей в цифровой среде и формирование цифровой грамотности",
+    "image_url": "https://image.pollinations.ai/prompt/parent%20and%20child%20discussing%20phone%20privacy%20in%20modern%20home%20soft%20lighting?width=1024&height=1024&nologo=true",
+    "news_title": "Вдоль канала Анхор в Чиланзарском районе Ташкента строится прогулочная зона протяжённостью 1,7 км",
+    "news_url": "https://www.gazeta.uz/ru/2026/11/24/anhor/"
   }
 ]
