@@ -791,5 +791,18 @@
     "image_url": "https://image.pollinations.ai/prompt/happy%20toddler%20watching%20cartoon%20with%20parent%2C%20bright%20colors%2C%20cozy%20home?width=1024&height=1024&nologo=true",
     "news_title": "В Астане наградили победителей и призеров XIX Президентской олимпиады",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1329868?lang=ru"
+  },
+  {
+    "id": 1795700174,
+    "created_at": "2026-11-26T13:36:14.079967+00:00",
+    "topic_id": "ai_dependency",
+    "topic_title": "«Мой ребёнок не может думать без ИИ»",
+    "text_ru": "Muammo: Ребенок слишком полагается на ИИ при выборе будущей профессии. → Tushuntirish: Исследования UNESCO 2023 показывают, что раннее знакомство с цифровыми навыками повышает вероятность успешной карьеры в IT‑секторе. При этом без ориентации ребенок может выбрать путь, не учитывая свои сильные стороны. → Yechim: Включите семейные проекты, где ребенок исследует разные цифровые профессии под руководством наставника, развивая осознанный выбор. → #DigitalFutureUz",
+    "text_uz": "Muammo: Bola kelajak kasbini tanlashda AI ga ortiqcha tayanadi. → Tushuntirish: UNESCO 2023 tadqiqotlari shuni ko'rsatadiki, erta yoshda raqamli ko'nikmalarni o'rganish IT sohasida muvaffaqiyatli kariyera imkoniyatini oshiradi. Biroq, yo'nalish tanlovi mustaqil ravishda amalga oshmasa, bola o'z kuchli tomonlarini hisobga olmaydi. → Yechim: Oila bilan birgalikda turli raqamli kasblarni o'rganish loyihalarini tashkil eting, murabbiy nazorati ostida mustaqil tanlovni rivojlantiring. → #DigitalFutureUz",
+    "hashtag": "#DigitalFutureUz",
+    "new_stage": "Этап 6 – Подготовка к цифровой профессиональной ориентации",
+    "image_url": "https://image.pollinations.ai/prompt/a%20child%20exploring%20various%20digital%20career%20paths%20with%20AI%20tools%2C%20supportive%20family%2C%20bright%20future?width=1024&height=1024&nologo=true",
+    "news_title": "В Астане стартовал заключительный этап XIX Президентской олимпиады",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1327042?lang=ru"
   }
 ]
