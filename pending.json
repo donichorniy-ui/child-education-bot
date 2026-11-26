@@ -778,5 +778,18 @@
     "image_url": "https://image.pollinations.ai/prompt/family%20children%20playing%20together%20outdoors%2C%20no%20screens%2C%20bright%20colors%2C%20natural%20setting?width=1024&height=1024&nologo=true",
     "news_title": "‘GTA Flu’ Has Schools and Jobs Bracing for Sick Days",
     "news_url": "https://www.nytimes.com/2026/11/18/us/gta-6-sick-work-school.html"
+  },
+  {
+    "id": 1795651248,
+    "created_at": "2026-11-26T00:00:48.744233+00:00",
+    "topic_id": "cartoons_under3",
+    "topic_title": "Мультики до 3 лет: где граница вреда",
+    "text_ru": "Muammo: Родители боятся, что ребёнок будет пассивно смотреть мультфильмы без осмысления. → Tushuntirish: По данным Американской академии педиатрии, развитие медиа‑грамотности с 2 лет повышает критическое восприятие визуального контента и снижает риск переутомления. → Yechim: Вводите совместный выбор мультфильмов, обсуждайте сюжет и предлагайте ребенку предлагать свои варианты, постепенно развивая самостоятельность. → #MediaLiteracyUz",
+    "text_uz": "Muammo: Ota-onalar bolalar televizorni passiv tomosha qilishidan xavotirlanadi. → Tushuntirish: Amerika pediatriya akademiyasi ma'lumotiga ko'ra, 2 yoshdan boshlab media savodxonligini rivojlantirish bolalarning vizual kontentni tanqidiy qabul qilishini oshiradi va charchash xavfini kamaytiradi. → Yechim: Birgalikda multfilm tanlash, syujetni muhokama qilish va bolaga o'z variantlarini taklif qilish imkoniyatini berish orqali mustaqil tanlovni rivojlantiring. → #MediaLiteracyUz",
+    "hashtag": "#MediaLiteracyUz",
+    "new_stage": "Этап 5: Развитие медиа‑грамотности и самостоятельного выбора контента",
+    "image_url": "https://image.pollinations.ai/prompt/happy%20toddler%20watching%20cartoon%20with%20parent%2C%20bright%20colors%2C%20cozy%20home?width=1024&height=1024&nologo=true",
+    "news_title": "В Астане наградили победителей и призеров XIX Президентской олимпиады",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1329868?lang=ru"
   }
 ]
