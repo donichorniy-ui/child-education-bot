@@ -856,5 +856,18 @@
     "image_url": "https://image.pollinations.ai/prompt/A%20caring%20parent%20and%20child%20at%20a%20health%20check-up%20clinic%2C%20bright%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
     "news_title": "В Казахстане за последние семь лет построили 1 342 школы",
     "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334061?lang=ru"
+  },
+  {
+    "id": 1795884005,
+    "created_at": "2026-11-28T16:40:05.441104+00:00",
+    "topic_id": "child_fears",
+    "topic_title": "Детские страхи: когда это норма, а когда проблема",
+    "text_ru": "Muammo: Ребёнок часто боится темноты, что мешает его сну. → Tushuntirish: Исследования показывают, что у 30% детей страх темноты связан с недостатком предсказуемости в вечерних рутинах. Регулярные ритуалы снижают уровень тревожности и улучшают качество сна. → Yechim: Ввести спокойный вечерний ритуал с мягким светом и рассказами, а также постепенно уменьшать интенсивность света. → #DetiBezStraha",
+    "text_uz": "Muammo: Bola kechqurun qorong'ulikdan qo'rqadi, bu uning uxlashiga to'siq bo'ladi. → Tushuntirish: Tadqiqotlar shuni ko'rsatadiki, bolalarning 30% qorong'ulikdan qo'rquvi kechki tartibsizlik bilan bog'liq. Doimiy kechki rituallar xavotirni kamaytiradi va uyqu sifatini oshiradi. → Yechim: Yumshoq yorug'lik, ertaklar va bosqichma-bosqich yorug'likni kamaytirish orqali tinch kechki ritulni joriy qiling. → #BolalarQorqmasin",
+    "hashtag": "#DetiBezStraha",
+    "new_stage": "Этап 6 – Интеграция навыков управления страхом в школьную и семейную среду, мониторинг прогресса",
+    "image_url": "https://image.pollinations.ai/prompt/child%20practicing%20breathing%20exercises%20with%20supportive%20parents%20in%20a%20bright%20room?width=1024&height=1024&nologo=true",
+    "news_title": "NYC School Worker With Arrest Record Charged With Attempted Murder",
+    "news_url": "https://www.nytimes.com/2026/11/19/nyregion/brooklyn-charter-school-gun.html"
   }
 ]
