@@ -843,5 +843,18 @@
     "image_url": "https://image.pollinations.ai/prompt/caring%20parent%20discussing%20future%20plans%20with%20child%2C%20bright%20classroom%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
     "news_title": "Почти 100 тысяч детей в Казахстане ждут своей очереди в детсады",
     "news_url": "https://ru.aulieatanews.kz/pochti-100-tysyach-detej-v-kazahstane-zhdut-svoej-ocheredi-v-detsady/"
+  },
+  {
+    "id": 1795848327,
+    "created_at": "2026-11-28T06:45:27.165036+00:00",
+    "topic_id": "school_anxiety",
+    "topic_title": "Ребёнок часто болеет перед школой",
+    "text_ru": "Muammo: Чаще всего ребёнок болеет перед школой и после каждой болезни симптомы возвращаются. Tushuntirish: Исследования WHO показывают, что регулярный мониторинг здоровья и раннее вмешательство снижают повторные случаи заболеваний на 30 %. Yechim: Ввести квартальные медицинские осмотры и вести дневник здоровья ребёнка. #ZdorovyeDetiUz",
+    "text_uz": "Muammo: Maktab oldidan bolada tez-tez kasalliklar qayta takrorlanadi. Tushuntirish: Tadqiqotlar ko'rsatadiki, muntazam sog'liq monitoringi va erta aralashuv kasallik takrorlanishini 30% ga kamaytiradi. Yechim: Har chorakda sog'liq tekshiruvi o'tkazish va sog'liq kundaligini yuritish. #ZdorovyeDetiUz",
+    "hashtag": "#ZdorovyeDetiUz",
+    "new_stage": "Этап 6: Долгосрочный мониторинг и профилактика рецидивов",
+    "image_url": "https://image.pollinations.ai/prompt/A%20caring%20parent%20and%20child%20at%20a%20health%20check-up%20clinic%2C%20bright%2C%20supportive%20atmosphere?width=1024&height=1024&nologo=true",
+    "news_title": "В Казахстане за последние семь лет построили 1 342 школы",
+    "news_url": "https://www.gov.kz/memleket/entities/edu/press/news/details/1334061?lang=ru"
   }
 ]
